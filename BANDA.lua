@@ -21,30 +21,30 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n\27')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[0;31m•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n التوكن غير صحيح تاكد منه ثم ارسله')
+print('\27[0;31m●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
-io.write('\27[0;31m تم حفظ التوكن بنجاح \na•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n27[0;39;49m')
+io.write('\27[0;31m تم حفظ التوكن بنجاح \na●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n27[0;39;49m')
 local json = JSON.decode(url)
 database:set(id_server..":token_username",json.result.username)
 database:set(id_server..":token",token)
 end 
-print('\27[0;35m•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n لم يتم حفظ التوكن ارسل لي التوكن الان')
+print('\27[0;35m●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
 os.execute('lua BANDA.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n\27[0;33;49m')
+io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n27[0;39;49m')
+io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;31m●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 
 io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
@@ -82,15 +82,15 @@ token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════• •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•"
+echo "●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○● ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●"
 echo "TG IS NOT FIND IN FILES BOT"
-echo "•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════• •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•"
+echo "●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○● ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●"
 exit 1
 fi
 if [ ! $token ]; then
-echo "•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════• •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•"
+echo "●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○● ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●"
 echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE Banda.lua \e[0m"
-echo "•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════• •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•"
+echo "●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○● ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●"
 exit 1
 fi
 echo -e "\033[38;5;208m"
@@ -900,7 +900,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."botss:BANDA:List:Rd:Sudo")
-text = "\nقائمة ردود المتعدده \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+text = "\nقائمة ردود المتعدده \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 db = "رساله "
 text = text..""..k.." => 「 '..v..' 」 => 「 '..db..' 」\n"
@@ -1014,7 +1014,7 @@ end
 
 if text == ("الردود العامه") and Debn(msg) then 
 local list = database:smembers(bot_id..'List:Rd:Sudo')
-text = "\n ◍ قائمة الردود العامه \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+text = "\n ◍ قائمة الردود العامه \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Sudo:Gif"..v) then
 db = 'متحركه'
@@ -1279,7 +1279,7 @@ end
 
 if text == ("الردود") and Manager(msg) then
 local list = database:smembers(bot_id..'List:Manager'..msg.chat_id_..'')
-text = " ◍ قائمه الردود \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+text = " ◍ قائمه الردود \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = 'متحركه'
@@ -1510,39 +1510,107 @@ send(msg.chat_id_, msg.id_," ◍ تمت الاذاعه الى *~ "..#list.." ~* 
 database:del(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end
+if Chat_Type == 'UserBot' then
+if not Debn(msg) then
+if text == '/start' or text == 'العوده✨'  then  
+local bl = '◍ انت الان العضو في البوت \n◍  سورس القمه\n ◍ يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SOURCE_ELKIMA)'
+local keyboard = {
+{'قسم مطورين السورس⚙'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'قسم الالعاب🎮'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'قـسم ممـيزات القمه'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+}
+send_inline_key(msg.chat_id_,bl,keyboard)
+end
+
+if text == 'قسم الالعاب🎮' then
+local Text = 'مرحب بيك في قسم الالعاب🎮'
+local Key = {	
+{'انصحني','تويت'},
+{'لو خيروك','نكته'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'حروف','كتبات'},
+{'بوسي','صراحه'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'رد عليه يابوت'},
+{'هينه','غنيلي'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'عقاب','بتكره دا'},
+{'صور','خلفيات'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'بايو','بوستات'},
+{'باد','ايدي'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'صور انيمي','ثيم'},
+{'اذكار','رتبتي'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'العوده✨'},
+}
+send_inline_key(msg.chat_id_,Text,Key)
+end 
+if text == 'قـسم ممـيزات القمه' then
+local Text = 'مميزات خاصه بي الي متفل في بوتو اغاني فقط'
+local Key = {
+{'اغاني','مميزات'},
+{'الافلام','العاب'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'قران','روايات'},
+{'من سيربح المليون'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'ثيم','الحوت الاسود'},
+{'تويت بالصور','لو خيروك بالصور'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'العوده✨'},
+}
+send_inline_key(msg.chat_id_,Text,Key)
+end 
+
 if text == "/start" then
-if not msa3d(msg) then
-if not Devban(msg) then
-local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'جاك') 
-local VENOM_Msg = { 
-' ـــــــــــــــــــــــــــــــــــــــــــــــ\n   🤖╖ أهلآ بك عزيزي أنا بوت  '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╜ سيتم ترقيتك مالك في البوت\nــــــــــــــــــــــــــــــــــــــــــــــــــــ ',
+if not Debn(msg) then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'القمه') 
+local BANDA_Msg = { 
+'  🤖╖ أهلآ بك عزيزي أنا بوت '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╜ سيتم ترقيتك مالك في البوت\n',
 } 
-Namebot = VENOM_Msg[math.random(#VENOM_Msg)] 
+Namebot = BANDA_Msg[math.random(#BANDA_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'معلومات📚', callback_data="/change-hhh"},{text = 'السورس🌀', callback_data="/change-siusr"},
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'الابراج🔮', callback_data="/zDRGd"},{text = 'الالعاب🎮', callback_data="/add"},
-},
-{
-{text = ' مــطــور الــبــوت🔰', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضغط لاضافه البوت لمجمعتك✅' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Banda.lua").botUserName.."?startgroup=start"},
 },
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
 send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
 end 
 end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
+end
+
+if text == 'قسم مطورين السورس⚙' then
+local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
+local Key = {
+{'⇣───「 قـناه المطورين」───⇣'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'التواصل'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'عايز بوت'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'قناة السورس'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'العوده✨'},
+}
+send_inline_key(msg.chat_id_,Text,Key)
+end 
+
 end
 end
 --------------------------------------------------------------------------------------------------------------
@@ -1562,12 +1630,16 @@ local bl =  '◍ انت الان المطور الاساسي في البوت \n�
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','الاحصائيات'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'قـسم الـسورس','قـسم مـسح&اضـف'},
 {'قـسم تـفعيل&تـعطيل','قـسم الـحمايه'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'قـسم الاذاعـه'},
 {'جلب المشتركين','جلب النسخه'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'جلب المطورين','جلب التوكن'},
 {'تحديث السورس ','الاصدار'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'معلومات السيرفر'},
 {'الغاء'},
 }
@@ -1728,11 +1800,11 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '⇗ نظام التشغيل ⇖•\n* '"$linux_version"'*' 
-echo '•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍「 الذاكره العشوائيه 」  ⇠\n* '"$memUsedPrc"'*'
-echo '•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍「 وحـده الـتـخـزيـن 」  ⇠\n* '"$HardDisk"'*'
-echo '•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍「 الـمــعــالــج 」  ⇠\n* '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍「 الــدخــول 」  ⇠\n* '`whoami`'*'
-echo '•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍「 مـده تـشغيـل الـسـيـرفـر 」 ⇠\n* '"$uptime"'*'
+echo '●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍「 الذاكره العشوائيه 」  ⇠\n* '"$memUsedPrc"'*'
+echo '●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍「 وحـده الـتـخـزيـن 」  ⇠\n* '"$HardDisk"'*'
+echo '●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍「 الـمــعــالــج 」  ⇠\n* '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍「 الــدخــول 」  ⇠\n* '`whoami`'*'
+echo '●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍「 مـده تـشغيـل الـسـيـرفـر 」 ⇠\n* '"$uptime"'*'
 ]]):read('*all'))  
 end
 if text == 'تحديث السورس ' and Debn(msg) then 
@@ -1781,7 +1853,8 @@ if text == 'قـسم الـسورس' and Debn(msg) then
 local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
 {'⇣───「 قـناه المطورين」───⇣'},
-{'قناة السورس','التواصل'},
+{'التواصل'},
+{'قناة السورس'},
 {'العوده🌟'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1790,10 +1863,15 @@ if text == 'قـسم مـسح&اضـف' and Debn(msg) then
 local Text = 'قسم مسح واضف مثلا اضف رد عام مسح رد عام'
 local Key = {
 {'اضف رد عام','مسح رد عام'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'مسح رد استارت','اضف رد استارت'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'اضف رد متعدد','مسح رد متعدد'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'ضع كليشه ستارت','مسح كليشه ستارت'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'ضع قناة الاشتراك','مسح رساله الاشتراك'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'العوده🌟'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1802,10 +1880,15 @@ if text == 'قـسم تـفعيل&تـعطيل' and Debn(msg) then
 local Text = 'قسم التفعيل والتعطيل لتفعيل كل شئ في البوت'
 local Key = {
 {'تعطيل الاذاعه','تفعيل الاذاعه'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'تعطيل المغادره','تفعيل المغادره'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'تعطيل التواصل ','تفعيل التواصل '},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'تفعيل الاشتراك الاجباري','تعطيل الاشتراك الاجباري'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'تفعيل البوت الخدمي ','تعطيل البوت الخدمي '},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'العوده🌟'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1813,11 +1896,18 @@ end
 if text == 'قـسم الـحمايه' and Debn(msg) then 
 local Text = 'قسم الحمايه يوجد في المطورين والثانوين والخ...'
 local Key = {
-{'قائمه الكتم العام','المطورين','قائمه العام'},
-{'المشتركين','الجروبات ','الردود العامه'},
-{'الثانوين'},
-{'تنظيف الجروبات ','تنظيف المشتركين'},
-{'تغير رساله الاشتراك ','الاشتراك الاجباري','تغير الاشتراك'},
+{'قائمه الكتم العام','المطورين'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'الردود العامه','قائمه العام'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'الجروبات ','المشتركي'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'تنظيف المشتركين','لثانوين'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'تغير الاشتراك','تنظيف الجروبات '},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'تغير رساله الاشتراك ','الاشتراك الاجباري'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'العوده🌟'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1826,8 +1916,11 @@ if text == 'قـسم الاذاعـه' and Debn(msg) then
 local Text = 'قسم الاذاعات لعمل اذاعه في البوت'
 local Key = {
 {'اذاعه ','اذاعه خاص '},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'اذاعه بالتثبيت '},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'اذاعه بالتوجيه ','اذاعه بالتوجيه خاص '},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'العوده🌟'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1960,7 +2053,7 @@ return false
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n ◍ قائمة مطورين الثانويين للبوت \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة مطورين الثانويين للبوت \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1999,7 +2092,7 @@ return false
 end
 if text == ("المطورين") and SudoBot(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ◍ قائمة المطورين \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة المطورين \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -2015,7 +2108,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("قائمه العام") and SudoBot(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n ◍ قائمه المحظورين عام \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمه المحظورين عام \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -2032,7 +2125,7 @@ return false
 end
 if text == ("قائمه الكتم العام") and SudoBot(msg) then
 local list = database:smembers(bot_id..'Gmute:User')
-t = "\n ◍ قائمة المكتومين عام \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة المكتومين عام \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -3458,7 +3551,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == "الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local All_name = database:smembers(bot_id.."BANDA:blocname"..msg.chat_id_)
-t = "\n ◍ قائمة الاسماء المكتومه \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════• \n"
+t = "\n ◍ قائمة الاسماء المكتومه \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○● \n"
 for k,v in pairs(All_name) do
 t = t..""..k.."- (["..v.."])\n"
 end
@@ -3650,22 +3743,23 @@ end
 end
 end,nil)   
 end
+
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
 ┍━━━━━☛ 𝐄𝐋𝐊𝐈𝐌𝐀 ☚━━━━━┑
-🔰𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐒𝐎𝐔𝐑𝐂𝐄🔰 𝐄𝐋𝐊𝐈𝐌𝐀
+🔰𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀
 🔰𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐒𝐎𝐔𝐑𝐂𝐄 𝐓𝐄𝐋𝐘
 🔰𝐒𝐏𝐄𝐄𝐃 𝐀𝐂𝐂𝐔𝐑𝐀𝐂𝐘 𝐒𝐀𝐅𝐄𝐓𝐘
 ┕━━━━━☛ 𝐄𝐋𝐊𝐈𝐌𝐀 ☚━━━━━┙
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑𝐘',url="t.me/Kory_111"},{text = '✹𝐃𝐄𝐕 𝐌𝐄𝐒𝐒𝐈!',url="t.me/Messi_ElKBer"}},
-{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA/270"}},
+{{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑𝐘',url="t.me/Bedo11111"},{text = '✹𝐃𝐄𝐕 𝐌𝐄𝐒𝐒𝐈!',url="t.me/Messi_ElKBer"}},
+{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./Banda.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SOURCE_ELKIMA/270&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SOURCE_ELKIMA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'كوري'  then
@@ -3675,10 +3769,10 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑𝐘',url="t.me/Kory_111"}},
+{{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑𝐘',url="t.me/Bedo11111"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Kory_111&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Bedo11111&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
 local Text = [[
@@ -3708,7 +3802,7 @@ return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000
 },function(ta,BANDA)
-local t = "\nツ قائمة الاعضاء \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════• \n"
+local t = "\nツ قائمة الاعضاء \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○● \n"
 x = 0
 local list = BANDA.members_
 for k, v in pairs(list) do
@@ -3730,8 +3824,103 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qapplu/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
+local Text = [[
+ يوزرات مبرمجين السورس 🍂
+محتاج تنصب بوت حمايه علي سورس القمه تواصل معانا✅
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝐃𝐕 𝐌𝐄𝐒𝐒𝐈', url="t.me/Messi_ElKBer"},{text = '𝐃𝐕 𝐊𝐎𝐑𝐘', url="t.me/Bedo11111"}},
+{{text = ' 𝐓𝐖 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/ELKIMA_BOT"}}, 
+{{text = '𝐖𝐄𝐋𝐂𝐌𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == "صور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,28); 
+local Text ='امسك يواد يهقر 🌚❤️' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/KHALFEAT_RO/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'اختبار الذكاء' or text == 'نسبه الذكاء' then
+local Text = [[
+رجل اشترى جهاز كهربائي بخصم 20% من إجمالي قيمة الجهاز، وهي نسبة تساوي 150 ريال؟.ما هي قيمة الجهاز؟.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '600', callback_data="/verp"},{text = '700', callback_data="/plling"},
+},
+{
+{text = '550', callback_data="/pullin"},{text = '237', callback_data="/pulng"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/38&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 
 
+if text == "باد" or text == "اسئله محرجه" then 
+local TWEET_Msg = { 
+" لا تحقرون صغيره إن الجبال من الحصي🥵",
+" عاوز تنزل ناو ولا لا ?🥵",
+" لو جيسكا قالتلك بيو بيو هتوافق ?🥵",
+" مين الممثله اللي نفسك تعمل معاها احيه ?🥵",
+" لو جاتلك فرصه تمارسي الجنس المخفف راح توافقي او لا ?🥵",
+"اخر مرهه غفلت حد وعملت معاه الجولاشه امته ?🥵 ",
+" اي اكتر حاجه بتشدك لجسم الجنس الاخر ?🥵",
+" بعتي نودز لكام ولد ?🥵",
+" عمرك سكسكتي مع ولد ?🥵",
+" بتسكسك مع كام بنت ?🥵",
+"قبلتي صديقك قبل كدا ?🥵 ",
+" عمرك مارست الجنس ?🥵",
+" ما رأيك في اللون الاسود حينما ترتديه فتاه بيضاء ?🥵",
+" اخر مره قبلت بنت ?🥵",
+"اخر مره قبلتي ولد ?🥵 ",
+" مشتهي شي ?🥵",
+"اخر مره قمت بزياره المواقع الايباحيه ?🥵 ",
+"بدك تمارسي العاده السريه من الامام ام الخلف ? 🥵",
+"ما المكان المفضل لك في ممارسه الجنس ?🥵 ",
+" متي قمت بممارسه العاده السريه اخر مره ?🥵",
+" ما لون ملابسك الداخليه المفضل ?🥵",
+"ما مقاس البرا التي ترتديها الان ?🥵 ",
+" كم مرا نكت بنت ؟🥵",
+"اخر مرا دخلت الحمام ؟🥵 ",
+"فشخت كام بنت🥵  ",
+" بلغت ولا لا 🥵",
+" عايز تنيك ولا لا 🥵",
+"حابه تفتحي تيزيك🥵  ",
+"اخر مره سكستي امته 🥵 ",
+"حابب تنيك خالتك 🥵 ",
+} 
+send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
+return false 
+end
+if text == "اذكار" then 
+local TWEET_Msg = { 
+"اللهم اهدنا واهد بنا واجعلنا سببا لمن اهتدي🤲❤️",
+"اللهم عوضنا خيرا عنن كل شئ إنكسر في أنفسنا وكل يأس أصاب قلوبنا🤲❤️",
+"اللهم أرحم أمواتنا برحمتك التي وسعت كل شئ🤲❤️",
+"لا الله الا انت سبحانك اني كنت من الظالمين🤲❤️",
+"استغفر الله العلي العظيم الذي لا الله الا هو الحي القيوم وهو علي كل شئ قدير🤲❤️",
+"اللهم تول مشاعرنا المشتته وصدورنا المرتجفه وقلوبنا التي اتعبتها قله الحيله🤲❤️",
+"اللهم كرهني في معصيتك وحببني في طاعتك🤲❤️",
+"اللهم يا باسط اليدين بالعطايا اعطي فقيدنا من خير ما اعيطت به نبيك محمد(صلي الله عليه وسلم) عطاء غير محمدود يا من تملك خزائن السموات والارض🤲❤️",
+"اللهم اجعل خير عمري اخره وخير عملي خواتمه وخير ايامي يوم القاك🤲❤️",
+"بسم الله الذي لا يضر مع اسمه شي في الارض ولا في السماء وهو السميع العليم🤲❤️",
+"اللهم اني اسالك الفوز في القضاء وعيش السعداء والنصر علي الاعداء🤲❤️",
+"اللهم بك اصبحنا وبك امسينا وبك نحيا ونموت واليك النشور🤲❤️",
+"لا اله الا الله وحده لا شريك له, له الملك وله الحمد وهو علي كل شئ قدير🤲❤️",
+} 
+send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
+return false 
+end
 if text == "تويت" or text == "كت تويت" then 
 local TWEET_Msg = { 
 "مرتبط؟ ", 
@@ -4163,6 +4352,16 @@ local TWEET_Msg = {
 send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
 return false 
 end
+if text == "خلفيات" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,28); 
+local Text ='امسك يواد يهقر 🌚❤️' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/KHALFEAT_RO/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 if text == "انصحني" or text == "انصحنى" or text == "انصح" then 
 local TWEET_Msg = { 
 "عامل الناس بأخلاقك ولا بأخلاقهم", 
@@ -4502,7 +4701,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SOURCE_ELKIMA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•' then
+if text == '●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●' then
 local Text = [[ 
  ◍من أحسن السورسات على التليجرام سورس القمه ◍
 بجد سورس أمان جدا وفي مميزات جامده
@@ -4511,7 +4710,7 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA/270"}}, 
+{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SOURCE_ELKIMA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4520,11 +4719,11 @@ end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[TWL](t.me/ELKIMA_BOT)
+[𝐓𝐖](t.me/ELKIMA_BOT)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'ͲᎳՏΌᏞ', url="t.me/ELKIMA_BOT"}}, 
+{{text = '𝐓𝐖', url="t.me/ELKIMA_BOT"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/7&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4632,7 +4831,7 @@ GetFile_Bot(msg)
 end
 if text == 'الاوامر المضافه' and Constructor(msg) then
 local list = database:smembers(bot_id..'List:Cmd:Group:New'..msg.chat_id_..'')
-t = " ◍ قائمه الاوامر المضافه  \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = " ◍ قائمه الاوامر المضافه  \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 Cmds = database:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
@@ -4832,6 +5031,28 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/kbbnv/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == "ثيم" or text == "them"  and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,25); 
+local Text ='امسك يواد يهقر 🌚❤️' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/senddocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/THAM_RO/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == "صور انيمي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,60); 
+local Text ='امسك يواد يهقر 🌚❤️' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_rogen/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "حروف بالصور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
@@ -5740,7 +5961,7 @@ return false
 end
 if text == ("قائمه العام") and Debn(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n ◍ قائمة المحظورين عام \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة المحظورين عام \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6183,7 +6404,7 @@ send(msg.chat_id_, msg.id_, "\n ◍ تم مسح قائمة المطورين  ")
 end
 if text == ("المطورين") and Debn(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ◍  قائمة مطورين البوت \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍  قائمة مطورين البوت \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6270,7 +6491,7 @@ end
 
 
 if text == 'الملفات' and Debn(msg) then
-t = ' ◍ ملفات السورس القمه↓\n •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════• \n'
+t = ' ◍ ملفات السورس القمه↓\n ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○● \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -6287,8 +6508,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n ◍ اهلا بك في متجر ملفات القمه\n ◍ ملفات السورس ↓\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n\n"
-local TextE = "\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍ علامة تعني { ✔️ } ملف مفعل\n ◍ علامة تعني { ✖ } ملف معطل\n ◍ قناة سورس القمه↓\n".." ◍ [اضغط هنا لدخول](t.me/SOURCE_ELKIMA) \n"
+local TextS = "\n ◍ اهلا بك في متجر ملفات القمه\n ◍ ملفات السورس ↓\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n\n"
+local TextE = "\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍ علامة تعني { ✔️ } ملف مفعل\n ◍ علامة تعني { ✖ } ملف معطل\n ◍ قناة سورس القمه↓\n".." ◍ [اضغط هنا لدخول](t.me/SOURCE_ELKIMA) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -6510,7 +6731,7 @@ end
 
 if text == 'قائمه القمه' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ◍ قائمه القمه\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمه القمه\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6527,7 +6748,7 @@ return false
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6694,7 +6915,7 @@ st = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..tok
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = " ◍ المنشئين الاساسين تعالو مخرب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = " ◍ المنشئين الاساسين تعالو مخرب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6716,7 +6937,7 @@ Srrt = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..t
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = " ◍ المنشئين الاساسين تعالو مخرب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = " ◍ المنشئين الاساسين تعالو مخرب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6806,7 +7027,7 @@ return false
 end
 if text == 'المنشئين الاساسين' and CoSu(msg) then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ◍ قائمة المنشئين الاساسين \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة المنشئين الاساسين \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6823,7 +7044,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6991,7 +7212,7 @@ end
 
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ◍ قائمة المنشئين \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة المنشئين \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7007,7 +7228,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7189,7 +7410,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == ("المدراء") and Constructor(msg) then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ◍ قائمة المدراء \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة المدراء \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7205,7 +7426,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7426,7 +7647,7 @@ return false
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n ◍  قائمة مطورين الثانويين للبوت \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍  قائمة مطورين الثانويين للبوت \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7769,7 +7990,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم مسح الادمنيه')
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ◍ قائمة الادمنيه \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة الادمنيه \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7785,7 +8006,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للادمنيه") or text == ("صيح الادمنيه") then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8297,7 +8518,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ◍ قائمة مميزين الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة مميزين الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8313,7 +8534,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ وينكم تعالو يريدوكم بالجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8630,7 +8851,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم مسح جميع الكلاب')
 end
 if text == ("تاك للكلاب") and Mod(msg) then
 local list = database:smembers(bot_id..'Modde:User'..msg.chat_id_)
-t = "\n ◍ قائمه كلاب الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمه كلاب الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8699,7 +8920,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع حمير من الج�
 end
 if text == ("تاك للحمير") and Mod(msg) then
 local list = database:smembers(bot_id..'Sakl:User'..msg.chat_id_)
-t = "\n ◍ قائمة حمير الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة حمير الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8769,7 +8990,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع وتكات الجرو
 end
 if text == ("تاك للوتكات") and Mod(msg) then
 local list = database:smembers(bot_id..'Motte:User'..msg.chat_id_)
-t = "\n ◍ قائمة وتكات الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة وتكات الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8838,7 +9059,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع القرده بالج
 end
 if text == ("تاك للقرود") and Mod(msg) then
 local list = database:smembers(bot_id..'Motee:User'..msg.chat_id_)
-t = "\n ◍ قائمة القرود الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة القرود الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8907,7 +9128,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع الارامل بال
 end
 if text == ("تاك للارامل") and Mod(msg) then
 local list = database:smembers(bot_id..'Bro:User'..msg.chat_id_)
-t = "\n ◍ قائمة ارامل الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة ارامل الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8976,7 +9197,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع الخولات بال
 end
 if text == ("تاك للخولات") and Mod(msg) then
 local list = database:smembers(bot_id..'Girl:User'..msg.chat_id_)
-t = "\n ◍ قائمة خولات الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة خولات الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9045,7 +9266,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع البقرات بال
 end
 if text == ("تاك للبقرات") and Mod(msg) then
 local list = database:smembers(bot_id..'Bakra:User'..msg.chat_id_)
-t = "\n ◍ قائمة البقرات الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة البقرات الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9114,7 +9335,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع المزز بالجر
 end
 if text == ("تاك للمزز") and Mod(msg) then
 local list = database:smembers(bot_id..'Tele:User'..msg.chat_id_)
-t = "\n ◍ قائمة مزز الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة مزز الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9183,7 +9404,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للاكساس") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◍ قائمة كساس الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة كساس الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9251,7 +9472,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع القلوب ')
 end
 if text == ("تاك لقلبي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◍ قائمة القلوب في الجروب\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة القلوب في الجروب\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9320,7 +9541,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع أولادي')
 end
 if text == ("تاك لولادي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◍ قائمة كساس الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة كساس الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9389,7 +9610,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك لبناتي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◍ قائمة بناتي الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة بناتي الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9458,7 +9679,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للخاينين") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◍ قائمة الخاينين الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة الخاينين الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9527,7 +9748,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع زواحف')
 end
 if text == ("تاك للرقاصات") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◍ قائمة رقاصات الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة رقاصات الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9596,7 +9817,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع جريزي')
 end
 if text == ("تاك للمتناكين") and Mod(msg) then
 local list = database:smembers(bot_id..'Jred:User'..msg.chat_id_)
-t = "\n ◍ قائمة المتناكين الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة المتناكين الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9665,7 +9886,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم مسح كل الحكاكين')
 end
 if text == ("تاك للحكاكين") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◍ قائمة حكاكين الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة حكاكين الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9733,7 +9954,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم مسح كل النسوان بالجروب
 end
 if text == ("تاك للنسوان") and Mod(msg) then
 local list = database:smembers(bot_id..'Girl:User'..msg.chat_id_)
-t = "\n ◍ قائمة نسوان الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة نسوان الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9801,7 +10022,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم مسح جميع المتزوجين')
 end
 if text == ("تاك للمتزوجين") and Mod(msg) then
 local list = database:smembers(bot_id..'Mode:User'..msg.chat_id_)
-t = "\n ◍ قائمه ازواج الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمه ازواج الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9870,7 +10091,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للميتنين") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◍ قائمة الميتنين \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة الميتنين \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9938,7 +10159,7 @@ send(msg.chat_id_, msg.id_, '\n ◍ تم مسح المحظورين')
 end
 if text == ("المحظورين") then
 local list = database:smembers(bot_id..'Ban:User'..msg.chat_id_)
-t = "\n ◍ قائمة محظورين الجروب \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة محظورين الجروب \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -10178,7 +10399,7 @@ send(msg.chat_id_, msg.id_, ' ◍ تم مسح المكتومين')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = database:smembers(bot_id..'Muted:User'..msg.chat_id_)
-t = "\n ◍ قائمة المكتومين \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة المكتومين \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -11330,12 +11551,12 @@ kickme = '✘'
 end
 NUM_MSG_MAX = database:hget(bot_id.."flooding:settings:"..msg.chat_id_,"floodmax") or 0
 local text = 
-'\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•'..
+'\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'..
 '\n ◍ اعدادات الجروب كتالي √↓'..
-'\nء•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•'..
+'\nء●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'..
 '\n ◍  علامة ال {✓} تعني مفعل'..
 '\n ◍  علامة ال {✘} تعني معطل'..
-'\nء•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•'..
+'\nء●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'..
 '\n ◍  الروابط  ⇠ { '..lock_links..
 ' }\n'..' ◍  المعرفات  ⇠ { '..lock_user..
 ' }\n'..' ◍  التاك  ⇠ { '..lock_hash..
@@ -11346,7 +11567,7 @@ local text =
 ' }\n'..' ◍  الماركدون  ⇠ { '..lock_mark..
 ' }\n'..' ◍  التعديل  ⇠ { '..lock_edit..
 ' }\n'..' ◍  تعديل الميديا  ⇠ { '..lock_edit_med..
-' }\nء•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•'..
+' }\nء●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'..
 '\n'..' ◍  الكلايش  ⇠ { '..lock_spam..
 ' }\n'..' ◍  الكيبورد  ⇠ { '..lock_inlin..
 ' }\n'..' ◍  الاغاني  ⇠ { '..lock_vico..
@@ -11366,10 +11587,10 @@ local text =
 ' }\n'..' ◍  التكرار  ⇠ { '..flood..
 ' }\n'..' ◍  الترحيب  ⇠ { '..welcome..
 ' }\n'..' ◍  عدد التكرار  ⇠ { '..NUM_MSG_MAX..
-' }\nء•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•'..
+' }\nء●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'..
 '\n ◍  علامة ال {✓} تعني مفعل'..
 '\n ◍  علامة ال {✘} تعني معطل'..
-'\nء•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•'..
+'\nء●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'..
 '\n'..' ◍  امر صيح  ⇠ { '..kickme..
 ' }\n'..' ◍  امر اطردني  ⇠ { '..sehuser..
 ' }\n'..' ◍  امر منو ضافني  ⇠ { '..addme..
@@ -11378,7 +11599,7 @@ local text =
 ' }\n'..' ◍  الايدي  ⇠ { '..idgp..
 ' }\n'..' ◍  الايدي بالصوره  ⇠ { '..idph..
 ' }\n'..' ◍  الرفع  ⇠ { '..setadd..
-' }\n'..' ◍  الحظر  ⇠ { '..banm..' }\n\n ◍•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍ قناة سورس القمه↓ \n'
+' }\n'..' ◍  الحظر  ⇠ { '..banm..' }\n\n ◍●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍ قناة سورس القمه↓ \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -11485,13 +11706,13 @@ if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n ◍قائمه الزخرفه \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍قائمه الزخرفه \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\nاضغط علي الاسم ليتم نسخه\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•ٴ\n ◍ ◍ ')
+send(msg.chat_id_, msg.id_, t..'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\nاضغط علي الاسم ليتم نسخه\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●ٴ\n ◍ ◍ ')
 end
 if text == "ضع رابط" or text == 'وضع رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
@@ -11775,7 +11996,7 @@ send(msg.chat_id_, msg.id_," ◍ تم مسح قائمه المنع")
 end
 if text == "قائمه المنع" and Manager(msg) then   
 local list = database:smembers(bot_id.."BANDA1:List:Filter"..msg.chat_id_)  
-t = "\n◍قائمة المنع \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n◍قائمة المنع \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do  
 local BANDA_Msg = database:get(bot_id.."BANDA1:Add:Filter:Rp2"..v..msg.chat_id_)   
 t = t..""..k.."- "..v.." ↭ {"..BANDA_Msg.."}\n"    
@@ -11920,7 +12141,7 @@ return false
 end
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = "\n ◍ قائمة البوتات الموجوده \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+text = "\n ◍ قائمة البوتات الموجوده \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -11939,7 +12160,7 @@ send(msg.chat_id_, msg.id_, " ◍ لا توجد بوتات في الجروب")
 return false 
 end
 if #admins == i then 
-local a = '\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍ عدد البوتات التي هنا >> {'..n..'} بوت\n'
+local a = '\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍ عدد البوتات التي هنا >> {'..n..'} بوت\n'
 local f = ' ◍ عدد البوتات التي هي ادمن >> {'..t..'}\n ◍ ملاحضه علامة ال ( ◍) تعني ان البوت ادمن \n'
 send(msg.chat_id_, msg.id_, text..a..f)
 end
@@ -12028,7 +12249,7 @@ if #list == 0 then
 send(msg.chat_id_, msg.id_,' ◍ لا توجد صلاحيات مضافه')
 return false
 end
-t = "\n ◍ قائمة الصلاحيات المضافه \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+t = "\n ◍ قائمة الصلاحيات المضافه \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 for k,v in pairs(list) do
 var = database:get(bot_id.."Comd:New:rt:bot:"..v..msg.chat_id_)
 if var then
@@ -12957,7 +13178,7 @@ PRo = '❴ ✔️ ❵'
 else
 PRo = '❴ ✖ ❵'
 end 
-send(msg.chat_id_, msg.id_,'\n ◍صلاحيات البوت هي\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍  علامة ال {✔️} تعني مفعل\n ◍  علامة ال {✖} تعني غير مفعل\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍تغير معلومات المجموعة ↞ '..INf..'\n ◍مسح الرسائل ↞ '..DEL..'\n ◍حظر المستخدمين ↞ '..REs..'\n ◍دعوة المستخدمين ↞ '..INv..'\n ◍ثتبيت الرسالة ↞ '..Pin..'\n ◍اضافة مشرفين ↞ '..PRo)   
+send(msg.chat_id_, msg.id_,'\n ◍صلاحيات البوت هي\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍  علامة ال {✔️} تعني مفعل\n ◍  علامة ال {✖} تعني غير مفعل\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍تغير معلومات المجموعة ↞ '..INf..'\n ◍مسح الرسائل ↞ '..DEL..'\n ◍حظر المستخدمين ↞ '..REs..'\n ◍دعوة المستخدمين ↞ '..INv..'\n ◍ثتبيت الرسالة ↞ '..Pin..'\n ◍اضافة مشرفين ↞ '..PRo)   
 end
 end
 if text == "تعطيل الانستا" and Manager(msg) then
@@ -12998,7 +13219,7 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end --الكود حصري سورس القمهيعني لو بكتهن راح اعرفك انت الاخذتهن
-local t = "\n ◍المستخدم ~ ["..User_id .."] يصيح المشرفين \n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n"
+local t = "\n ◍المستخدم ~ ["..User_id .."] يصيح المشرفين \n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n"
 k = 0
 for i,v in pairs(data.members_) do
 if bot_id ~= v.user_id_ then 
@@ -14849,7 +15070,7 @@ local List = {
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
 ➞: ??𝒔??𝒓𓂅 #username 𓍯➸💞.
 ➞: 𝒎𝒔𝒈𝒆?? #msgs 𓍯➸💞.
-➞: 𝒊𝒅 ?? #id 𓍯➸💞.
+➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
 ]],
 [[
 ☆•𝐮𝐬𝐞𝐫 : #username 𖣬  
@@ -14895,7 +15116,7 @@ local List = {
 🇪🇬𝗖𝗛 - 「@SOURCE_ELKIMA」 💞.
 ]],
 [[
- 𝚄𝚂𝙴𝚁 𓄹𓄼 #username
+ 𝚄𝚂𝙴?? 𓄹𓄼 #username
  𝙸𝙳  ??𓄼 #id 
  𝚂𝚃𝙰 𓄹𓄼 #stast 
  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
@@ -15213,7 +15434,7 @@ local List = {
 ⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ★
 • 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
-• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
+• 🖤 | 𝑰?? : #id ‌‌‏♕
 • 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
 • 🖤 | 𝗖𝗛 - 「@SOURCE_ELKIMA」 ◍.
 ]],
@@ -15551,7 +15772,7 @@ Msᴀɢ ~ #msgs
 ࿕ ¦• 𝙐𝙎𝙀𝙍  ⟿ #username ༆
  ࿕ ¦• 𝙈𝙎𝙂??   ⟿ #msgs ༆
  ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
- ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
+ ࿕ ¦• 𝙏𝘿 𝙎??𝘼  ⟿ #id ༆
 ••• ••• ••• ••• ••• ••• •••
  ࿕ ¦• 𝗖𝗛 - 「@SOURCE_ELKIMA」 ◍
 ]],
@@ -15714,7 +15935,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
-◣: 𝐮𝐬??𝐫𓂅 #username 𓍯➥♡.
+◣: 𝐮𝐬??𝐫?? #username 𓍯➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝐢𝐝 𓂅 #id 𓍯➥♡.
 ◣: 𝗖𝗛 - 「@SOURCE_ELKIMA」 ◍
@@ -16936,45 +17157,6 @@ database:set(bot_id..'lock:reply'..msg.chat_id_,true)
 Text = '\n ◍ تم تعطيل الردود'
 send(msg.chat_id_, msg.id_,Text) 
 end
-
-
-if text == 'الابراج' then
-local Text = [[
-• أختر برجك عزيزي •📮،⍆
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '• الاسد ،🦁', callback_data="/zking"},{text = '• الثور 🐂', callback_data="/zzor"},
-},
-{
-{text = '• العقرب 🦂', callback_data="/zakrb"},{text = '• القوس 🏹', callback_data="/zkos"},
-},
-{
-{text = '• الحمل 🐐', callback_data="/zBanda"},
-},
-{
-{text = '• السرطان 🦀', callback_data="/zsltan"},{text = '• العذراء 🦋', callback_data="/zazra"},
-},
-{
-{text = '• الميزان ⚖', callback_data="/zmezan"},{text = '• الجدي 🦌', callback_data="/zgagy"},
-},
-{
-{text = ' معرفة برجك 🧭', callback_data="/zporg"},
-},
-{
-{text = '• الحوت 🐋', callback_data="/zhot"},
-},
-{
-{text = '• الجوزاء 🌩', callback_data="/zguza"},{text = '• الدلو 🦯', callback_data="/zdlu"},
-},
-{
-{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/36&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
 if text == 'روابط الحذف' or text == 'رابط  حذف' or text == 'رابط الحذف' then
 local Text = [[
 مواقع  مسح حسابات،🍂
@@ -17034,6 +17216,7 @@ end
 end -- Chat_Type = 'GroupBot' 
 end -- end msg 
 --------------------------------------------------------------------------------------------------------------
+function tdcli_update_callback(data)  -- clback
 if data.ID == "UpdateChannel" then 
 if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
 database:srem(bot_id..'Chek:Groups','-100'..data.channel_.id_)  
@@ -17057,11 +17240,11 @@ return false
 end
 local Teext =[[
 اوامر حماية المجموعه ⇊
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
 قفل  ⇔  فتح + الامر 
 قفل  ⇔  فتح ❲ الكـــل ❳
 ❲ بالتقيد ، بالطرد ، بالكتم ❳
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍الروابط
  ◍المعرف
  ◍التاك
@@ -17089,7 +17272,7 @@ local Teext =[[
  ◍الصوت
  ◍الجهات
  ◍الاشعارات
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
 
 ]]
 keyboard = {} 
@@ -17112,15 +17295,15 @@ end
 local Teext =[[
  ◍  اوامر اصحاب الرتب ⇊
  ◍الادمن ⇔ المنشئ ⇔ المالك
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍❲ المميز❳ ⇊
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍ كشف
  ◍ المحظورين
  ◍ المكتومين
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍❲ الادمن❳ ⇊
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍ رفع مميز ⇔ تنزيل مميز
  ◍ الترحيب
  ◍ اضف مغادره ⇔ مسح المغادره
@@ -17135,9 +17318,9 @@ local Teext =[[
  ◍ تثبيت ⇔ تثبيت بدون اشعار
  ◍ الغاء تثبيت الكل
  ◍  ❲ + ❳ جميع ماسبق
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍ ❲ المنشئ❳ ⇊
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍  رفع ⇔ تنزيل ادمن
  ◍ اضف ⇔  مسح  ❲ رد ❳
  ◍ الردود ⇔  مسح الردود
@@ -17151,9 +17334,9 @@ local Teext =[[
  ◍  مسح الكلمات الممنوعه
  ◍ المميزين عام
  ◍  ❲ + ❳ جميع ماسبق
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍ ❲ المالك❳ ⇊
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍ اضف صوره ⇔ وصف (للجروب)
  ◍ رفع منشئ ⇔ تنزيل منشئ
  ◍ تاج للاعضاء ⇔ للكل
@@ -17164,7 +17347,7 @@ local Teext =[[
  ◍ ضع اسم+الاسم ⇔ تحديث
  ◍ المنشئين ⇔  مسح المنشئين
  ◍  ❲ + ❳ جميع ماسبق
- •═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+ ●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
 
 ]]
 keyboard = {} 
@@ -17189,7 +17372,7 @@ local Teext =[[
  ◍مرحب بيك في اوامر للمطورين ◍
 اوامر المطورين ⇊
 ❲المطرو❳  ⇊
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍تفعيل ← تعطيل 
  ◍المجموعات ← المشتركين ← الاحصائيات
  ◍رفع ← تنزيل منشئ اساسي
@@ -17197,9 +17380,9 @@ local Teext =[[
  ◍مسح المنشئين ← المنشئين
  ◍اسم ~ ايدي + بوت غادر 
  ◍اذاعه 
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
 ❲المطور الاساسي+ المطور الثانوي❳
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍تفعيل
  ◍تعطيل
  ◍مسح الاساسين
@@ -17251,7 +17434,7 @@ local Teext =[[
  ◍المجموعات 
  ◍تفعيل/تعطيل المغادره
  ◍مسح الجروبات
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
 
 ]]
 keyboard = {} 
@@ -17273,7 +17456,7 @@ return false
 end
 local Teext =[[
     ❲اوامر الاعضاء ⇊❳     
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍   غنيلي ⇔ حساب العمر   
  ◍   صورتي ⇔ نسبه جمالي
  ◍   نقاطي
@@ -17294,7 +17477,7 @@ local Teext =[[
  ◍   بوسو ⇔ بوسها
  ◍   بتحب دي ⇔ بتحب ده
  ◍  بوت الحذف⇔رابط الحذف
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
 
 ]]
 keyboard = {} 
@@ -17317,7 +17500,7 @@ end
 local Teext =[[
 اوامر ❲التسليه❳  ⇊
 رفع ⇔ تنزيل + الامر
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  ◍رفع + تنزيل ← متوحد
  ◍تاك للمتوحدين
 ◍- - - - - - - -×- - - - - - - -◍
@@ -17366,7 +17549,7 @@ local Teext =[[
  ◍رفع  ← علي زبي
  ◍تنزيل ←من زبي 
  ◍تاك للمتناكين
-•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
 
 ]]
 keyboard = {} 
@@ -17525,7 +17708,7 @@ return false
 end
 local Teext =[[
  🥳╖ ❬ m 3 ❭ 3 ⃣ Tall orders ⇊
-🔐╜ Lifting «» Download + it
+??╜ Lifting «» Download + it
 ════════ Me ════════
 
 🤰╖ my son
@@ -17764,8 +17947,7 @@ end
 ------------------------------ callback add dev mr sofi
 if Text == '/mute-name' then
 local Teext =[[
- ●أنت الآن في العاب السورس ..↑↓
-●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
+ ◍أنت الآن في العاب السورس ..↑↓
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17778,9 +17960,9 @@ keyboard.inline_keyboard = {
 {{text = 'لعبه كشف الكذب', callback_data="/help47"}},
 {{text = 'مريم', callback_data="/help36"},{text = 'عقاب', callback_data="/help42"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"}},
+{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}},
 }
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 
 if Text == '/help30' then
@@ -17853,30 +18035,10 @@ local Text = 'لتجربه العلبه عليك ان تكتب كشف الكذب
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(Text).."&show_alert=true")
 return false
 end
-function mahmoudr(chat_id, reply_to_message_id, audio, caption, markdown) 
-send_api = "https://api.telegram.org/bot"..token 
-local url = send_api.."/sendAudio?chat_id=" .. chat_id .. "&audio=" .. audio .."&caption=" .. URL.escape(caption) 
-if reply_to_message_id ~= 0 then 
-reply_to_message_id_ = reply_to_message_id
-url = url .. "&reply_to_message_id=" .. reply_to_message_id_ .."&parse_mode=Markdown" 
-end 
-return s_api(url) 
-end
-if text == 'صوت' then
-audio = 'هنا تحط رابط الاغنيه'
-caption = 'هنا تكتب النص اللي هيظهر مع الاغنيه'
-mahmoudr(msg.chat_id_, msg.id_/2097152/0.5,audio,caption)
-end
-
-
-
-
-
-
-if Text == '/DRG' then
+if Text == '/sofi' then
 local Teext =[[
- ● مرحبا بيك في الالعاب  الالكترونيه ..↑↓
-●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
+ ⦁ اهلا في قائمه الالعاب المتطوره سورس بارلو ⦁ 
+تفضل اختر لعبه من القائمه 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17906,35 +18068,36 @@ keyboard.inline_keyboard = {
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"}},
+{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}},
 }
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
+
 if Text == '/change-names' then
 local Teext =[[
-    『اوامر الاعضاء ⇊』  
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
- ●   غنيلي ⇔ حساب العمر   
- ●   صورتي ⇔ نسبه جمالي
- ●   نقاطي
- ●    مسح ⇔ بيع 『نقاطي 』 
- ●   رسائلي ⇔  مسح 『رسائلي 』 
- ●   زخرفه ⇔ اغاني 
- ●   اسمي ⇔ الرتبه
- ●  جهاتي 
- ●  صلاحياتي
- ●  قول +الكلمه
- ●  تفعيل  تعطيل+ اطردني   
- ●   سورس ⇔ المطور
- ●   الرابط ⇔ ايدي
- ●   رتبتي ⇔ كشف
- ●   رد  انت يا بوت
- ●  ي رايك يابوت
- ●   هينو ⇔ هينها
- ●   بوسو ⇔ بوسها
- ●   بتحب دي ⇔ بتحب ده
- ●  بوت الحذف⇔رابط الحذف
-●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
+    ❲اوامر الاعضاء ⇊❳  
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
+ ⦁   غنيلي ⇔ حساب العمر   
+ ⦁   صورتي ⇔ نسبه جمالي
+ ⦁   نقاطي
+ ⦁    مسح ⇔ بيع ❲نقاطي ❳ 
+ ⦁   رسائلي ⇔  مسح ❲رسائلي ❳ 
+ ⦁   زخرفه ⇔ اغاني 
+ ⦁   اسمي ⇔ الرتبه
+ ⦁  جهاتي 
+ ⦁  صلاحياتي
+ ⦁  قول +الكلمه
+ ⦁  تفعيل  تعطيل+ اطردني   
+ ⦁   سورس ⇔ المطور
+ ⦁   الرابط ⇔ ايدي
+ ⦁   رتبتي ⇔ كشف
+ ⦁   رد  انت يا بوت
+ ⦁  ي رايك يابوت
+ ⦁   هينو ⇔ هينها
+ ⦁   بوسو ⇔ بوسها
+ ⦁   بتحب دي ⇔ بتحب ده
+ ⦁  بوت الحذف⇔رابط الحذف
+●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●
  
 ]]
 keyboard = {} 
@@ -17943,16 +18106,17 @@ keyboard.inline_keyboard = {
 {text = '◗القائمه الرائسيه◖', callback_data="/change-id"},
 },
 {
-{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"},
+{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if Text == '/change-id' then
 local Teext =[[
- ● الاوامر الاعضاء ..↑↓
+ اتبع الاوامر الاعضاء
  تحت لي في الزر الأسفل↓
-●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
+ 
+ ..
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17960,33 +18124,29 @@ keyboard.inline_keyboard = {
 {text = 'اوامر الاعضاء', callback_data="/change-names"},
 },
 {
-{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"},
+{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if Text == '/change-photo' then
 local Teext =[[
-● مرحباً بك في الالعاب المضافه حديثا ..↑↓
-●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
+◍ مرحباً بك في الالعاب المضافه حديثا ..↑↓
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'تويت', callback_data="/help12"},{text = 'تويت بالصور', callback_data="/help56"}},   
+{{text = 'تويت', callback_data="/ghkk"},{text = 'تويت بالصور', callback_data="/help56"}},   
 {{text = 'لو خيروك', callback_data="/help20"},{text = 'لو خيروك بالصور', callback_data="/help25"}}, 
 {{text = 'انصحني', callback_data="/help13"},{text = 'كتبات', callback_data="/help19"}}, 
 {{text = 'الصراحه', callback_data="/help14"},{text = 'حروف', callback_data="/help21"}}, 
-{{text = 'اسالني', callback_data="/hakwl"},{text = 'اختبار الذكاء', callback_data="/wyauuu"}}, 
-{{text = 'مستقلبي', callback_data="/whklpp"},{text = 'الابراج', callback_data="/uwujjh"}}, 
 {{text = 'رزله', callback_data="/help15"},{text = 'رد عليه يابوت', callback_data="/help22"}}, 
 {{text = 'بتكره دا', callback_data="/help16"},{text = 'نكته', callback_data="/help23"}}, 
-{{text = 'حروف بالصور', callback_data="/Xcvb"},{text = 'اصنع', callback_data="/klpou6"}}, 
-{{text = 'غنيلي', callback_data="/help17"}},
+{{text = 'غنيلي', callback_data="/help17"},{text = 'اختبار الذكاء', callback_data="/wyauuu"}}, 
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"}},
+{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}},
 }
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if Text == '/Xcvb' then
 local Text = 'لتجربه العلبه عليك ان تكتب حروف بالصور في الشات🔰'
@@ -18018,7 +18178,7 @@ local Text = 'لتجربه العلبه عليك ان تكتب الابراج ف
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(Text).."&show_alert=true")
 return false
 end
-if Text == '/help12' then
+if Text == '/ghkk' then
 local Text = 'لتجربه العلبه عليك ان تكتب تويت في الشات🔰'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(Text).."&show_alert=true")
 return false
@@ -18088,512 +18248,32 @@ local Text = 'لتجربه العلبه عليك ان تكتب لو خيروك �
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(Text).."&show_alert=true")
 return false
 end
-if Text == '/help56' then
-local Text = 'لتجربه العلبه عليك ان تكتب تويت بالصور في الشات🔰'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(Text).."&show_alert=true")
-return false
-end
 --- callback added
 if Text == '/add' then
 local Teext =[[
-● اهلا بك في قسم الالعاب ..↑↓
+🎮 اهلا بك في قسم الالعاب ..↑↓
  اختر العبه الذي تريدها .↑↓
 ده من الازرار بلاسفل . ↓
-●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
+◍- - - - - - - -×- - - - - - - -◍
  
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '◗العاب السورس◖', callback_data="/mute-name"},{text = '◗الاضافات◖', callback_data="/change-photo"},
+{text = '◗العاب السورس◖', callback_data="/mute-name"},{text = '◗مميزات◖', callback_data="/change-photo"},
 },
 {
-{text = '◗ متطوره◖', callback_data="/DRG"},
+{text = '◗العاب متطوره◖', callback_data="/sofi"},
 },
 {
-{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"},
+{text = '◗الاوامر◖', callback_data="/help12"},
+},
+{
+{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"},
 },
 }
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
-if Text == '/zDRGd' then
-local Teext =[[
-• اختر برجك عزيزي •📮،⍆
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '• الاسد ،🦁', callback_data="/zking"},{text = '• الثور 🐂', callback_data="/zzor"},
-},
-{
-{text = '• العقرب 🦂', callback_data="/zakrb"},{text = '• القوس 🏹', callback_data="/zkos"},
-},
-{
-{text = '• الحمل 🐐', callback_data="/zBanda"},
-},
-{
-{text = '• السرطان 🦀', callback_data="/zsltan"},{text = '• العذراء 🦋', callback_data="/zazra"},
-},
-{
-{text = '• الميزان ⚖', callback_data="/zmezan"},{text = '• الجدي 🦌', callback_data="/zgagy"},
-},
-{
-{text = ' معرفة برجك 🧭', callback_data="/zporg"},
-},
-{
-{text = '• الحوت 🐋', callback_data="/zhot"},
-},
-{
-{text = '• الجوزاء 🌩', callback_data="/zguza"},{text = '• الدلو 🦯', callback_data="/zdlu"},
-},
-{
-{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-if Text == '/change-hhh' then
-local Teext =[[ 
-● اليك قائمه الاسعار في الاسفل ..↑↓
-●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'اسعار التنصيب', callback_data="/change-hklp"},{text = 'اسعار السورسات', callback_data="/change-gfgjo"},
-},
-{
-{text = 'نبذه عن السورس', callback_data="/change-ghjjgyy"},
-},
-{
-{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/change-hklp' then
-local Teext =[[
- سعر التنصيب علي سورس جاك
- سعر التنصيب العادي 25ج
- سعر التنصيب المميز 35 ج
-تواصل مع المطورين لتنصيب
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '•ᴅᴇᴠɪᴅ♪',url="t.me/de_vi_d"},{text = '•ʀᴏʙᴏᴛ♪', url="t.me/P_X_U"}},
-{{text = '˹ᴛᴀᴡᴏsʟ˼',url="t.me/VeNoM_TeAm1"}}, 
-{{text = '●𝙱𝙰𝙲??↵', callback_data="/change-hhh"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/change-gfgjo' then
-local Teext =[[
-سعر السورس عندنا
- السورسات بتبدا مت100لي 240ج
- سعر المصنع200
- سعر السيرفر ،100,و 4 بي120, 170
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'الــمــبــرمــج بــانــدا', url="t.me/QSDRG"}},
-{{text = 'تــواصــل بــانــدا',url="t.me/VeNoM_TeAm1"}}, 
-{{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/change-hhh"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/change-ghjjgyy' then
-local Teext =[[
-📬 • 𝐚𝐛𝐨𝐮𝐭 𝐭𝐡𝐞 𝐬𝐨𝐮𝐫𝐜𝐞
-●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-●سورس خاص في حماية المجموعات من التفليش 🚸 . 
-●تستطيع تنصيب بوتك وتصبح المطور الاساسي 👨🏼‍✈️.
-●تستطيع اضافة قناتك اشتراك اجباري في بوتك ⚠️ .
-●سرعة في اداء البوت ومزايا حصرية فقط لسورسنا 〽️ .
-●لمعرفة ميزات اكثر عن السورس زور قناة التحديثات .
-●اطلب بوتك الأن 🌐 .
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'ՏΌႮᎡᏟᎬ ᏙᎬΝΌᎷ', url="t.me/Source_JACK"}},
-{{text = '˹تــواصــل الـسـورس˼',url="t.me/VeNoM_TeAm1"}}, 
-{{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/change-hhh"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/zzor' then
-local Teext =[[
-برج الثور ( 20/4 - 20/5 )
-
-الكوكب : الزهرة
-
-أرقام الحظ : 11, 29, 29, 37, 56
-
-الأحجار : الزمرد , الفيروز
-
-البرج : ترابي
-
-يتوافق مع :  برج العذراء   و برج الجدي -  برج السرطان - برج الحوت 
-
-الأعمال الملائمة  : موظفي بنك- فنانين- محاسبين-موسيقيين- عمال
-
-إيجابيات برج الثور : صبور- يمكن الاعتماد عليه- محب- من طبعه الإصرار والتصميم- هادئ ويحب الطمأنينة
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/zguza' then
-local Teext =[[
-برج الجوزاء ( 21/5 - 20 /6 ) كوكب برج الجوزاء : عطارد أرقام الحظ  لبرج الجوزاء: 12-21-30-48-47 أحجار برج الجوزاء : العقيق نوع برج الجوزاء : هوائي يتوافق برج الجوزاء مع : برج الميزان - برج الحمل - برج الأسد - برج القوس الأعمال الملائمة لبرج الجوزاء : برامج حوارية - تجار - مك
-إيجابيات  برج الجوزاء: ذكي - متقد الذهن - فصيح - لدية روح الشباب - متعدد المواهب - اجتماعي - متأقلم
-
-سلبيات برج الجوزاء : متوتر - غير ثابت على حال - عصبي - ماكر- فضولي
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-if Text == '/zdlu' then
-local Teext =[[
-برج الدلو ( 20/1 - 18/2 )
-
-الكوكب : زحل
-
-ارقام الحظ : 11- 29- 38-47- 56
-
-الاحجار : الفيروز
-
-البرج : هوائي
-
-يتوافق مع : برج الجوزاء - برج الميزان -برج الحمل -برج الجوزاء
-
-الاعمال الملائمة برج الدلو : مخترعين- سياسيين- كتاب- علماء- رواد فضاء- منجمين
-
-ايجابيات برج الدلو  : ودود، إنساني، صادق، وفي وصاحب ولاء، مبدئي، مبتكر
-
-سلبيات برج الدلو : مستقل وذكي. عنيد، يقف ضد الأمور، مشاكس، غير متوقع التصرفات، غير عاطفي وله استقلاليته.
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-
-if Text == '/zhot' then
-local Teext =[[
-برج الحوت ( 19/2 - 20/3 )
-
-الكوكب : المشتري ارقام الحظ : 12- 21- 39- 48- 57
-
-الاحجار : حجر القمر
-
-البرج : مائي
-
-يتوافق مع : برج السرطان - برج العقرب -برج الثور
-
-الاعمال الملائمة : أطباء بيطريين- علماء أحياء- فنانين- أطباء-موسيقيين- علماء نفس
-
-ايجابيات برج الحوت : صاحب خيال، حساس، عاطفي، لطيف، غير أناني، لا تهمه الماديات، صاحب حدس وبديهة ويتعاطف مع الآخرين.
-
-سلبيات برج الحوت  : مثالي و يتهرب من الواقع، كتوم للأسرار وغامض، إرادته ضعيفة وسهل الانقياد.
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-
-if Text == '/zakrb' then
-local Teext =[[
-برج العقرب ( 24/10 - 21/11 )
-
-الكوكب : المريخ
-
-ارقام الحظ : 17- 26- 35- 44-53
-
-الاحجار : الياقوت-العقيق
-
-البرج : مائي
-
-يتوافق مع : برج الحوت - برج السرطان - برج الثور
-
-الاعمال الملائمة : أطباء- محققين- علماء بيئة- مهندسين- عملاء سريين.
-
-ايجابيات برج العقرب: صاحب عزيمة- قوي- عاطفي- ذو حدس- ذو طاقة - مثير - شخصيته جذابة- كتوم للأسرار
-
-سلبيات برج العقرب : كثير الرفض- يحب السيطرة - محب للتملك- غيور -عنيد.
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-if Text == '/zkos' then
-local Teext =[[
-برج القوس ( 22/11 - 21/12)
-الكوكب : المشتري
-
-ارقام الحظ : 18-27- 36-45- 54
-
-الاحجار : الفيروز
-
-البرج : ناري
-
-يتوافق مع : الحمل - الاسد-الجوزاء
-
-الاعمال الملائمة : وكلاء سفر-مكتشفين-بروفيسورات- سفراء- تجار
-
-ايجابيات : متفائل، محب للحرية، مرح، له روح مرحة جميلة، صادق، مستقيم، ذكي وصاحب فلسفة
-سلبيات : متفائل بصورة عمياء، مهمل، غير مسؤول، سطحي، غير لبق، قلق
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-
-if Text == '/zmezan' then
-local Teext =[[
-برج الميزان ( 23/9 - 23/10 )
-
-الكوكب : الزهرة
-
-ارقام الحظ : 6- 16- 25- 34- 43- 52
-
-الاحجار : الماس
-
-البرج : هوائي
-
-يتوافق مع : برج الدلو - برج الجوزاء - برج القوس
-
-الاعمال الملائمة : وظائف دبلوماسية- قضاة- مستشارين- أخصائيين نفسيين - فنانين
-
-ايجابيات برج الميزان : دبلوماسي، مؤدب، رومانسي، ساحر، سهل النقياد، اجتماعي، صاحب مبادئ ومسالم
-
-سلبيات برج الميزان : متردد، قابل للتغير، ساذج، يتأثر بسرعة، منطوي على نفسه.
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-
-
-if Text == '/zazra' then
-local Teext =[[
-برج العذراء ( 23/8 - 22/9 )
-
-الكوكب : عطارد
-
-ارقام الحظ : 6- 15- 24- 33- 42- 51
-
-الاحجار : العقيق
-
-البرج : ارضي
-
-يتوافق: مع   برج الجدي   ، برج الثور ،برج السرطان ، برج العقرب
-
-الاعمال الملائمة : كيميائيين- أطباء-محققين- أخصائيي تغذية- أطباء بيطريين- مدراء- مقاولين
-ايجابيات برج العذراء : متواضع، خجول، دقيق، يمكن الاعتماد عليه، عملي، مجتهد، ذكي ويميل إلى التحليل
-سلبيات برج العذراء : سريع الانزعاج، كثير القلق، كثير الانتقاد، قاسي، يسعى نحو الكمالية ومحافظ
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/zking' then
-local Teext =[[
-برج الأسد ( 23/6 - 22/8 )
-
-الكوكب : الشمس
-
-ارقام الحظ : 14- 13- 32-41- 50
-
-الاحجار : الياقوت،العنبر
-
-البرج : ناري
-
-يتوافق مع : برج القوس - برج الحمل - برج الدلو
-
-الاعمال الملائمة : مدراء، مهندسين معماريين، مخترعين، مدرسين، رياضيين ومدراء
-
-ايجابيات برج الأسد : كريم، دافئ القلب، مبدع، حماسي، واسع العقل، وفي محب
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-if Text == '/zsltan' then
-local Teext =[[
-برج السرطان ( 22/6 - 22/7 )
-
-الكوكب : القمر
-
-ارقام الحظ : 13- 22-31-40- 48- 57
-
-الاحجار : اللؤلؤ،العنبر-الياقوت
-
-البرج : مائي
-
-يتوافق مع : برج العقرب ، برج الحوت ،برج الجدي ،برج الثور
-
-الاعمال الملائمة : أطباء، صيادلة، مدرجاك، أخصائيو تغذية، شيف، سماسرة
-
-ايجابيات برج السرطان : عاطفي، محب، صاحب حدس وبديهة، صاحب خيال واسع
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/zBanda' then
-local Teext =[[
-برج الحمل :- ( 21/3 - 19/4 )
-
-الكوكب : المريخ
-
-أرقام الحظ : 10 ,19, 28, 37, 46, 55
-
-الأحجار : الياقوت - الماس
-
-البرج : نارى
-
-يتوافق مع :برج الاسد -برج  القوس - برج الجوزاء -برج  الدلو
-
-الأعمال الملائمة : رجل إطفاء ، طبيب ، ميكانيكي ، طبيب أسنان ، لاعب رياضي محترف أو رجل أعمال
-سلبيات برج الحمل : أناني - سريع الغضب - متهور - عديم الصبر – الطيش
-  مميّزات برج الحمل ١.١ الثقة العالية بالنّفس ١.٢ روح القيادة ١.٣ الطاقة الإيجابيّة ١.٤ الشجاعة ١.٥ الإبداع ١.٦ الطّموح ١.٧ حبّ المغامرة ١.٨ الإخلاص ١.٩ الاستقلاليّة ٢ عيوب برج الحمل ٢.١ الأنانيّة ٢.٢ حبّ لفت الانتباه ٢.٣ الغضب ٢.٤ احتكار الحديث ٢.٥ التسرّع
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-if Text == '/zgagy' then
-local Teext =[[
-برج الجدي ( 22/12 - 19/1 )
-
-الكوكب : زحل
-
-ارقام الحظ: 10-28- 37-46- 55
-
-الاحجار : العقيق اليماني
-
-البرج : ترابي
-
-يتوافق مع : برج الثور- برج العذراء
-
-الاعمال الملائمة : مدراء عامين- مدراء-وزراء، -مهندسي كومبيوتر.
-
-ايجابيات برج الجدي: عملي، عاقل- طموح- منظم- صبور- حذر- صاحب روح مرحة ومتحفظ
-
-سلبيات برج الجدي : متشائم- متعلق بالأقدار- بائس- حاقد، متمسك بالتقاليد أكثر من اللازم وجامد.
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/zporg' then
-local Teext =[[
-❣- برج الجدي: من 12/22 - الى 1/19•
-❣- برج الدلو: من 1/20 - الى 2/18•
-❣- برج الحوت: من 2/19 - الى 3/20•
-❣- برج الحمل: من 3/21 - الى 4/19•
-❣- برج الثور: من 4/20 - الى 5/20•
-❣- برج الجوزاء: من 5/21 - الى 6/20•
-❣- برج السرطان: من 6/21 - الى 7/21•
-❣- برج الاسد: من 7/23 - الى 8/22•
-❣- برج العذراء: من 8/23 - الى 9/22•
-❣- برج الميزان: من 9/23 - الى 10/22•
-❣- برج العقرب: من 10/23 - الى 11/21•
-❣- برج القوس: من 11/22 - الى 12/21•
- ●○━━━━𝑱𝑨𝑵𝑲𝑬𝑬𝑺━━━━○●
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/zDRGd"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if data.ID == "UpdateNewMessage" then  -- new msg
 msg = data.message_
@@ -18766,6 +18446,59 @@ local LEADER_Msg = {
 send(msg.chat_id_, msg.id_,'['..LEADER_Msg[math.random(#LEADER_Msg)]..']') 
 return false
 end
+end
+if text == "بوستات" or text == "كتابات" then 
+local TWEET_Msg = { 
+"انا مبكرهش حد انا يا بعزك يا متشغلنيش",
+"ابتعد وهو يعلم ان في بعده وجعي",
+"لدي قلب بارد يستطيع التخلي عن الجميع بكل بساطة لذا لا تتعامل معي علي انك شئ نادر",
+"من يريد البقاء سيظل معك حتي لو كنت اسوأ من في الارض",
+"انتهت القصه واغلق الكتاب انت ذهبت وانا لم اعد اكتب",
+"خليكو صحاب احسن...الحب بيبوظ كل حاجه",
+"موضوع انه يحبك لوحدك دا انسية خالص كفاية انك تبقي من العشرة الاوائل فحياتة",
+"تعلمت الكثير من الاشياء المهمه واحدة منها الا اخرب وان اكون جاهز لكل مصير كتب لي مهما كانت صعوبته لاني لا استطيع النجاح..استطيع صنا حياه سعيده حتي لو كانت في اعماق الظلام",
+"اترك هذه الزاويه فـهـم لـن يـعـودوا حتب ان تالمت",
+"كل العالم تهون بس انت تبقي",
+"في منتصف اعماق قلبي انت هناك",
+"يلزمك الكثير لشد انتباهي",
+"طبيعتك مبهره لشخص عايزك",
+"الواحد محتاج ضهر مش الي هوا سند وكده لا ضهر حقيقي",
+"في ناس نفسي اقولها مش معني انك موجود برا حديقة الحيوان دا يلغي انتمائك ليها",
+"مفيش حاجه بتفضل علي حالها حتي لو انا اتغيرت كنت جميلة وبقيت اجمل",
+"انا بحس بالوحده لما فلوسي تخلص مش لما الناس تمشي من حياتي",
+"انا الوحيده الي بسامح الناس حتي لو كانو دايسين عليا باتوبيس نقل عام",
+"ساظل احبك حتي تنقطع انفاسي حتي بعد المسافات حتي كثره الخلافات بيننا ساظل احبك ",
+"انتهي املي بك لم يعد كل شئ كما في السابق الليله قررت الذهاب للابد هذا الحل الوحيد الذي بحوزتي لاصلاح كل ما حدث لبناء كل ماهدم",
+"فـلـيـحـتـرق الـعـالـم لـم اقـعـد اهـتـم",
+"ليكرهك الناس لصراحتك خيرا من ان يحبوم لنفاقك",
+"انا لا احب السهر بل احب من كان سبب في سهري",
+"من لا يراني في مقدمة اشيائه لا اراه في اخر محولاتي",
+"لن اعاتب احداا بعد اليوم....كونوا كما تكونو... فانا لنفسي وانتوو لامثالكم🔥❤",
+"انا بقيت بتعمد اظهر كل عيوبي في الاول عشان محدش في الاخر يقولي اتصدمت واتخرمت والشغلانه دي😊💔",
+"جميعنا نحاول التعافي من شيئٍ ما لا أحد يعرف عنه شيئاً. 💖",
+"لي تكلف نفسك عناء المعامله بالمثل وانت ممكن تلغي المعامله خالص🙃💜",
+"كل واحد فينا جواه قصه غيرته ومن ساعتها وهو مش عارف يرجع طبيعى زى الأول🙃💔",
+"دورت بين النجوم 🔍🌟قلت اشوفك فيهم 🎶💘لقيتك انتي القمر🌝ونورك مغطي عليهم🌈💛",
+"متبررش حاجة سيب إللي شايفك زفت يشوفك زفتين 💋🤞",
+"زي مخليتگو گل حاجهه خليتگوا ولا حاجه الموضوع سهل💋.",
+"حلوة المواقف اللي بتحصل بِالغلط ، و تخليك تعرف قيمتك عند كل شخص💜",
+"متبقاش شمعه بتتحرق عشان تنور لواحد اعمي.... ده مش تضحيه ده غباء👍...",
+"ان نزلت دمعه من عينيك امسحها وانا سأمسح من انزلها... 🖤",
+"بقي اهم هدف في حياتي اني اتجاهل اي حاجه واريح دماغي😌🖤",
+"مبقاش نافع نكون صحاب مبقاش نافع نمثل اكتر...🥀💔",
+"ولمـا سـألوني عــن جـاملهـا بـصيت ع القـمر فهمـوني 🌚💗.",
+"_مهما كنتوا قريبين مني مش هتعرفوا عني حاجه غير اللي انا عايزة اعرفهالكوا😂",
+"انا مشيت عشان فهمت مش عشان زعلت واللي بيمشي فاهم مبيرجعش.💔",
+"اذا احترمتني ساحترمك وان لم تحترمني ساحترمك أيضا ف انا أمثل نفسي وانت تمثل نفسك💋💖",
+"*انا بحب احرق دمي اوي يعني اشوف ايه اكتر حاجه دايقتني في حياتي واقعد افكر فيها ربنا يشفيني🖤🙂*",
+"نا مش عارف ده صح ولا لا بس انا ملاحظ ان الناس اللي قلوبها كويسه خظها قليل جدا في الدنيا زي ما يكون خدت نصيبها من الحظ كله في نضافه قلبها💔*",
+"كنت هادئاً أمامك بينما كان داخلي يحترق 😔🥀💔",
+"حياتى بقت عباره عن وحده ،  مللل🙂 ، نوم ، كسره قلب",
+"انا عملت كل حاجه واتقالي اني معملتش اي حاجه ، ف بدأت فعلا معملش حاجه وانا متعمد ..",
+"لا تسقني ماء الحياة بذلّةٍ، بل فاسقني بالعزّ كأس الحنضلِ.",
+} 
+send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
+return false 
 end
 if text and text ~="صراحه" and database:get(bot_id..":"..msg.sender_user_id_..":rkko_Bots"..msg.chat_id_) == "sendrkkoe" then
 numj = {"اما قله ادب صحيح كلو كدب فى كدب💔😔"," ده مظبوط🙂😹"," اقلك الكلام ده كدب واللى قالولك كداب وانت كداب واللى بيتفرج كمان كداب🤝😂"," ده برجوله وموثق كمان❤️😁","فعلا بتتكلم صح🤗","يجدع قول كلام غير دا😹","احس هل شي كذب🌚💕","طب عيني ف عينك كدا ??","انت صح",};
@@ -18942,7 +18675,7 @@ end
 if #list == 0 then
 t = " ◍ لا يوجد ادمن"
 end
-send(msg.chat_id_,0,''..t..'\n•═════•〈〈 𝐄𝐋𝐊𝐈𝐌𝐀 〉〉•═════•\n ◍ تم التعديل على الميديا\n ◍ الشخص الي قام بالتعديل\n ◍ ايدي الشخص ⇠ '..result.sender_user_id_..'\n ◍ معرف الشخص ⇠{ '..users..' }') 
+send(msg.chat_id_,0,''..t..'\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍ تم التعديل على الميديا\n ◍ الشخص الي قام بالتعديل\n ◍ ايدي الشخص ⇠ '..result.sender_user_id_..'\n ◍ معرف الشخص ⇠{ '..users..' }') 
 end,nil)
 DeleteMessage(msg.chat_id_,{[0] = msg.message_id_}) 
 end
@@ -19118,6 +18851,8 @@ end
 
 end -- end new msg dev.mr sofi 
 end -- end callback dev.mr sofi
+
+
 
 
 
