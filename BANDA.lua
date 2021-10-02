@@ -2017,7 +2017,19 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
 end
-
+if text == 'مبرمج السورس ميسي' and Debn(msg) then
+database:del(bot_id..'Srt:Bot') 
+local Text = [[ 
+「المبرمج ميسي لو حابب تتواصل معاه
+اتبع الزر إلى تحت ↓」
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '✹𝐃𝐄𝐕 𝐌𝐄𝐒𝐒𝐈', url="t.me/Messi_ElKBer"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 if text == 'قناه السورس' and Debn(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
@@ -3765,14 +3777,14 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'ميسي'  then
+if text == 'كوري'  then
 local Text = [[
- مبرمج السورس ميسي لو حابب تتواصل معاه
+ مطور السورس كوري لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✹𝐃𝐄𝐕 𝐌𝐄𝐒𝐒𝐈',url="t.me/Messi_ElKBer"}},
+{{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑𝐘',url="t.me/Bedo11111"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Kory_111&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3794,20 +3806,6 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-
-if text == 'كوري'  then
-local Text = [[
- مطور السورس كوري لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑𝐘',url="t.me/Bedo11111"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Kory_111&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ◍ ارسل الان اذاعتك؟ \n ◍ للخروج ارسل الغاء ")
@@ -13183,7 +13181,7 @@ PRo = '❴ ✔️ ❵'
 else
 PRo = '❴ ✖ ❵'
 end 
-send(msg.chat_id_, msg.id_,'\n ◍صلاحيات البوت هي\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍  علامة ال {✔️} تعني مفعل\n ◍  علامة ال {✖} تعني غير مفعل\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍تغير معلومات المجموعة ↞ '..INf..'\n ◍مسح الرسائل ↞ '..DEL..'\n ◍حظر المستخدمين ↞ '..REs..'\n ◍دعوة المستخدمين ↞ '..INv..'\n ◍ثتبيت الرسالة ↞ '..Pin..'\n ◍اضافة مشرفين ↞ '..PRo)   
+send(msg.chat_id_, msg.id_,'\n ◍صلاحيات البوت هي\n●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●\n ◍  علامة ال {✔️} تعني مفعل\n ◍  علامة ال {✖} تعني غير مفعل\n●○━━━━𝐄𝐋𝐊??𝐌𝐀━━━━○●\n ◍تغير معلومات المجموعة ↞ '..INf..'\n ◍مسح الرسائل ↞ '..DEL..'\n ◍حظر المستخدمين ↞ '..REs..'\n ◍دعوة المستخدمين ↞ '..INv..'\n ◍ثتبيت الرسالة ↞ '..Pin..'\n ◍اضافة مشرفين ↞ '..PRo)   
 end
 end
 if text == "تعطيل الانستا" and Manager(msg) then
