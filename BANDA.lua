@@ -3755,24 +3755,37 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑𝐘',url="t.me/Bedo11111"},{text = '✹𝐃𝐄𝐕 𝐌𝐄𝐒𝐒𝐈!',url="t.me/Messi_ElKBer"}},
-{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}},
+{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA/270"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./Banda.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SOURCE_ELKIMA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'كوري'  then
+if text == 'ميسي' or text == 'ميسي الهقر' or text == 'مبرمج السورس' then
 local Text = [[
- مطور السورس كوري لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓
+مـیـسـی مبرمج سورس الـقـمـه لوحابب تتواصل معاه ❤️.
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑𝐘',url="t.me/Bedo11111"}},
+{{text = '✹𝐃𝐄𝐕 𝐌𝐄𝐒𝐒𝐈',url="t.me/Messi_ElKBer"}},
+{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Bedo11111&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/S_H_Y_C_O&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'کوری' or text == 'کوری الهقر' or text == 'مطور السورس' then
+local Text = [[
+گـوري مطور سورس الـقـمـه لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✹𝐃𝐄𝐕 𝐊𝐎𝐑',url="t.me/Bedo11111"}},
+{{text = '✹𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐋𝐊𝐈𝐌𝐀', url="t.me/SOURCE_ELKIMA"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/S_H_Y_C_O&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
 local Text = [[
