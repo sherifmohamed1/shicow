@@ -2017,19 +2017,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
 end
-if text == 'مبرمج السورس ميسي' and Debn(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-「المبرمج ميسي لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓」
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '𝚂𝙷 𝚈 𝙲 𝙾', url="t.me/S_H_Y_C_O"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
+
 if text == 'قناه السورس' and Debn(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
