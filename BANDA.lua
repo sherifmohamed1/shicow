@@ -12189,8 +12189,6 @@ send(msg.chat_id_, msg.id_,t)
 end 
 end,nil)  
 end   
-end
-
 if text == ("كشف البوتات") and Mod(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
