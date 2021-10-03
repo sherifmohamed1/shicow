@@ -1521,6 +1521,10 @@ local keyboard = {
 {'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 {'قـسم ممـيزات القمه'},
 {'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'اسعارالتنصيب'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
+{'اسعار السورسات باكمل الحقوق'},
+{'●○━━━━𝐄𝐋𝐊𝐈𝐌𝐀━━━━○●'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
@@ -1595,6 +1599,39 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end
 end
 
+if text == "اسعارالتنصيب" then
+if not DevSoFi(msg) then
+local Text = [[
+┌ سعر التنصيب علي سورس القمه
+├ سعر التنصيب العادي 25ح
+└ تواصل مع المطورين لتنصيب
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '˹𝙳𝚅 𝙼𝙴𝚂𝚂𝙸˼',url="t.me/Messi_ElKBer"},{text = '˹𝙳𝚅 𝙺𝙾𝚁𝚈˼', url="t.me/Bedo11111"}},
+{{text = '˹𝚃𝚆𝙰𝚂𝙾𝙻 𝙼𝙴𝚂𝚂𝙸˼',url="t.me/ELKIMA_BOT"}}, 
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+end
+if text == "اسعار السورسات باكمل الحقوق" then
+if not DevSoFi(msg) then
+local Text = [[
+┌ سعر السورس عند القمه
+├ السورسات بتبدا مت100لي 200ج
+├ سعر المصنع150
+└ سعر السيرفر ،80,و 4 بي120, 8بي160
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '˹الـمـبـرمـج مـیـسـی˼', url="t.me/Messi_ElKBer"}},
+{{text = '˹تــواصــل مـیـسـی˼',url="t.me/ELKIMA_BOT"}}, 
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+end
 if text == 'قسم مطورين السورس⚙' then
 local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
