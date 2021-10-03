@@ -12190,6 +12190,7 @@ end
 end,nil)  
 end   
 end
+
 if text == ("كشف البوتات") and Mod(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -16005,7 +16006,7 @@ Msᴀɢ ~ #msgs
 - 𝄬 username . #username ➪🇪🇬
  - 𝄬 stast . #stast ➪🇪🇬
  - 𝄬 id . #id ➪🇪🇬
- - 𝄬 msgs . #msgs ➪🇪??
+ - 𝄬 msgs . #msgs ➪🇪🇬
  - 𝄬 𝗖𝗛 - 「@SOURCE_ELKIMA」 ◍
 ]],
 [[
