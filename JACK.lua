@@ -2939,7 +2939,7 @@ local Text ="᥀︙تم تفعيل المجموعه "..chat.title_
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text ='ترتيب الاوامر', callback_data="/awamer1"},{text ='رفع الادمنيه', callback_data="/admen2"},
+{text ='رفع الادمنيه', callback_data="/admen2"},
 },
 {
 {text ='اخفاء الكليشه', callback_data="/hide"},
@@ -10457,15 +10457,14 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if text == ("تحكم رتبه") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then  
+if text == ("تحكم رتبه") and SudoBot(msg) then
 function start_function(extra, result, success)
 local keyboard = {
-{{text = 'حظر او الغاء الحظر ', callback_data=msg.sender_user_id_.."uqhqthju"..result.sender_user_id_},{text = 'رفع مشرف', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/setiinginfo"}},   
-{{text ='●   تحكم الرتب',callback_data=msg.sender_user_id_.."uban"..result.sender_user_id_}},
-{{text = '◍sᴏᴜʀᴄᴇ ɴsᴀs𖤣', url="t.me/Sh_e_t_o_s1"}},
+{text = 'رفع رتبه', callback_data="/rtdash"},{text = 'تعديل الصلاحيات', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/setiinginfo"},
+{text ='᥀︙𝗦𝗢𝗨𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀', url="t.me/Source_JACK"},
 }
 local msg_id = msg.id_/2097152/0.5
-send_inline_key(msg.chat_id_,"مـرحبـا بـك فـي قائـمه التحكم في العضـو فقط اضغط علي الامر ⤈ ",nil,keyboard,msg_id)
+send_inline_key(msg.chat_id_,"*يمكنك التحكم عن طريق الازرار  بالاسفل  ᥀︙ .*",nil,keyboard,msg_id)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
@@ -11691,53 +11690,6 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 ---------
-if text == ("تخ") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local Source_JACK = bot_data:get(ban_id..'text:ch:user')
-if Source_JACK then
-send(msg.chat_id_, msg.id_,'['..Source_JACK..']')
-else
-send(msg.chat_id_, msg.id_,' ᥀︙  لا تستطيع استخدام البوت \n ᥀︙   يرجى الاشتراك بالقناه اولا \n ᥀︙   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
-end
-return false
-end
-if bot_data:get(ban_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,' ᥀︙  تم تعطيل القتل') 
-return false
-end
-function start_function(extra, result, success)
-bot_data:sadd(ban_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n ᥀︙  الـعـضو   ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'Source_JACK')..')'
-local  statuss  = '\n ᥀︙ تم قتله بنجاح\n'
-send(msg.chat_id_, msg.id_, usertext..statuss)
-end,nil)
-end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
-return false
-end
-
-if (text == ("اصحه")) and msg.reply_to_message_id_ and Mod(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local Source_JACK = bot_data:get(ban_id..'text:ch:user')
-if Source_JACK then
-send(msg.chat_id_, msg.id_,'['..Source_JACK..']')
-else
-send(msg.chat_id_, msg.id_,' ᥀︙  لا تستطيع استخدام البوت \n ᥀︙   يرجى الاشتراك بالقناه اولا \n ᥀︙   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
-end
-return false
-end
-function start_function(extra, result, success)
-bot_data:srem(ban_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n ᥀︙  الـعـضو   ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'Source_JACK')..')'
-status  = '\n ᥀︙  تم ◍ رجوع  للحياه\n'
-send(msg.chat_id_, msg.id_, usertext..status)
-end,nil)
-end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
-return false
-end
 if text == 'مسح المحظورين' and Mod(msg) then
 bot_data:del(ban_id..'DRG:User'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, '\n ᥀︙  تم مسح المحظورين')
@@ -19678,6 +19630,23 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 
+if Text == '/rtdash' then
+local Teext =[[ 
+᥀︙يمكنك التحكم عن طريق الازرار  بالاسفل  ..↑↓
+❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text =' مساعد',callback_data=msg.sender_user_id_.."msa3d:ban"..result.sender_user_id_}},
+{{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_}},
+{{text =' ثانوي مجموعه',callback_data=msg.sender_user_id_.."SirSudoGp"..result.sender_user_id_}},
+{{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_}},
+{{text =' مطور مجموعه',callback_data=msg.sender_user_id_.."SudoBotGp"..result.sender_user_id_}},
+{{text ='᥀︙𝗦𝗢𝗨𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀', url="t.me/Source_JACK"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+
 if Text == '/help30' then
 local Text = 'لتجربه العلبه عليك ان تكتب البات في الشات🔰'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(Text).."&show_alert=true")
@@ -22683,7 +22652,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 else
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 𝑆𝑂𝑈𝑅??𝐸 𝐽𝐴𝐶𝐾',url='http://t.me/Source_JACK'}},
+{{text = ' 𝑆𝑂𝑈𝑅𝐶𝐸 𝐽𝐴𝐶𝐾',url='http://t.me/Source_JACK'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *᥀︙︙تم تنفيذ الامر سابقا*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
