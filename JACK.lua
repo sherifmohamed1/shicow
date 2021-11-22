@@ -10457,14 +10457,14 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if text == ("تحكم رتبه") and SudoBot(msg) then
+if text == ("تحكم رتبه") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then  
 function start_function(extra, result, success)
 local keyboard = {
-{text = 'رفع رتبه', callback_data="/rtdash"},{text = 'تعديل الصلاحيات', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/setiinginfo"},
-{text ='᥀︙𝗦𝗢𝗨𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀', url="t.me/Source_JACK"},
+{{text = 'رفع رتبه', callback_data="/rtdash"},{text = 'تعديل الصلاحيات', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/setiinginfo"}},
+{{ ='᥀︙𝗦𝗢𝗨𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
-send_inline_key(msg.chat_id_,"*يمكنك التحكم عن طريق الازرار  بالاسفل  ᥀︙ .*",nil,keyboard,msg_id)
+send_inline_key(msg.chat_id_,"مـرحبـا بـك فـي قائـمه التحكم في العضـو فقط اضغط علي الامر ⤈ ",nil,keyboard,msg_id)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
