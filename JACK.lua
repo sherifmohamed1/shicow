@@ -18697,30 +18697,30 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-᥀︙ اهلا بك في قائمة الاوامر ↫ ⤈ 
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
-᥀︙ 💎 ↫ اوامر الحمايه
-᥀︙ 💎 ↫ اوامر الادمنيه
-᥀︙ 💥 ↫ اوامر المدراء
-᥀︙ م4 ↫ اوامر المنشئين
-᥀︙ اوامر المطورين🌖
-᥀︙ 💭 ↫ اوامر الاعضاء
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
- [᥀︙ 𝐶𝐻 𝐽𝐴𝐶𝐾 ᥀︙ ](https://t.me/Source_JACK)
+⇊ قائمه الاوامر اليك في الاسفل ⇊
+◍- - - - - - - -×- - - - - - - -◍
+᥀︙🌖↫ اوامر التعيل والتفعيل ~ ⓵
+᥀︙🌖↫ اوامر الادمنيه ~ ②
+᥀︙🌖↫ اوامر المدراء ~ ③
+᥀︙🌖↫ اوامر المنشئين ~ ④
+᥀︙🌖↫اوامر المطورين ~ ⑤
+᥀︙🌖↫ اوامر الاعضاء ~ ⑥
+◍- - - - - - - -×- - - - - - - -◍
+ [᥀︙𝐶𝐻 𝐽𝐴𝐶𝐾︙᥀ ](https://t.me/Source_JACK)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text ='◍اوامر التعطيل ◍', callback_data="/help2"},{text ='◍اوامر الادمنيه◍', callback_data="/help7"},
+{text ='⓵', callback_data="/help2"},{text ='②', callback_data="/help7"},
 },
 {
-{text ='◍اوامر الاعضاء◍', callback_data="/help6"},{text = '◍اوامـر الرتـب◍', callback_data="/DelList"},
+{text ='③', callback_data="/help6"},{text = '④', callback_data="/DelList"},
 },
 {
-{text ='◍اوامر المطورين◍', callback_data="/help5"},{text ='◍اوامر القفل◍', callback_data="/help1"},
+{text ='⑤', callback_data="/help5"},{text ='⑥', callback_data="/help1"},
 },
 {
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
+{text ='اخفاء الكليشه', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -19819,7 +19819,7 @@ local Teext =[[
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 🌏︙ 𝑺𝑶𝑼𝑹𝑪𝑬 𝑱𝑨𝑪𝑲
  ––––––––––––––––
-🚸︙𝑻𝑾𝑨??𝑶𝑳 𝑱𝑨𝑪𝑲
+🚸︙𝑻𝑾𝑨𝑺𝑶𝑳 𝑱𝑨𝑪𝑲
  ––––––––––––––––
 🇹🇷︙𝑻𝑬𝑨𝑴 𝑱??𝑵𝑲𝑬𝑬𝑺
  ––––––––––––––––
@@ -21625,7 +21625,7 @@ bot_data:set(ban_id.."lock:Engilsh"..msg.chat_id_,'del')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '᥀︙ ??𝙰𝙲𝙺↵', callback_data="/help8"},
+{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
