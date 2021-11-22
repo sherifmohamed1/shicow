@@ -6210,13 +6210,13 @@ local Source_JACK = bot_data:get(ban_id..'text:ch:user')
 if Source_JACK then
 send(msg.chat_id_, msg.id_,'['..Source_JACK..']')
 else
-send(msg.chat_id_, msg.id_,' ◉ لا تستطيع استخدام البوت \n ◉  يرجى الاشتراك بالقناه اولا \n ◉  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ᥀︙ لا تستطيع استخدام البوت \n ᥀︙  يرجى الاشتراك بالقناه اولا \n ᥀︙  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
 if not bot_data:sismember(ban_id..'Spam:Texting'..msg.sender_user_id_,text) then
 bot_data:sadd(ban_id..'Spam:Texting'..msg.sender_user_id_,text) 
-tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da)  tdcli_function ({ ID = "SendChatAction",  chat_id_ = msg.sender_user_id_, action_ = {  ID = "SendMessageTypingAction", progress_ = 100}  },function(arg,ta)  tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)  tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = msg.sender_user_id_,offset_ = 0,limit_ = 1},function(extra,ban,success) 
+tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da)  tdcli_function ({ ID = "SendChatAction",  chat_id_ = msg.sender_user_id_, action_ = {  ID = "SendMessageTypingAction", progress_ = 100}  },function(arg,ta)  tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)  tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = ban_id,offset_ = 0,limit_ = 1},function(extra,ban,success) 
 if da.status_.ID == "ChatMemberStatusCreator" then 
 rtpa = 'المالك'
 elseif da.status_.ID == "ChatMemberStatusEditor" then 
@@ -6245,7 +6245,7 @@ local bana = {
 "⚕ جمـال ودلال 😍",
 "⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★",
 "⚕ 𓆰 قمـر ماشي ع الارض 🙈★",
-"◉ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗦𝗢𝗥𝗖𝗘 𝗝𝗔𝗖𝗞 ◉",
+"᥀︙ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗦𝗢𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀",
 
 }
 local rdphoto = bana[math.random(#bana)]
@@ -6288,7 +6288,7 @@ else
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي ❨'..Name..'❩ \n¦• 𝚄𝚂𝙴𝚁 ↝  ❨'..Name..'❩    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ ❨'..Msguser..'❩.   ↝💘\n ¦• 𝚁𝙰𝙽??↝ ❨'..Rutba(msg.sender_user_id_,msg.chat_id_)..'❩    ↝💘\n¦• 𝙸𝙳↝  ❨'..msg.sender_user_id_..'❩    ↝💘\n¦• 𝒄𝒉↝   ❨@Source_JACK❩ ↝🇧??\n')
 else
-send(msg.chat_id_, msg.id_, '\n ◉ الصوره ⋙ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↝ ❨'..username..'❩\n¦• 𝙼𝚂𝙶𝚂↝ ❨'..Msguser..'❩\n¦• 𝙸𝙳↝  ❨'..msg.sender_user_id_..'❩\n¦• 𝒄𝒉↝  ❨@Source_JACK❩\n')
+send(msg.chat_id_, msg.id_, '\n ᥀︙ الصوره ⋙ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↝ ❨'..username..'❩\n¦• 𝙼𝚂𝙶𝚂↝ ❨'..Msguser..'❩\n¦• 𝙸𝙳↝  ❨'..msg.sender_user_id_..'❩\n¦• 𝒄𝒉↝  ❨@Source_JACK❩\n')
 end 
 end
 end
@@ -8965,7 +8965,7 @@ end
 if text == 'المطور' or text == 'مطور' then 
 tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)  
 local msg_id = msg.id_/2097152/0.5 
-local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..result.first_name_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴𝚁 ~[@"..result.username_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..SUDO..""
+local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..result.first_name_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴?? ~[@"..result.username_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..SUDO..""
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = result.first_name_,url="t.me/"..result.username_}}, 
