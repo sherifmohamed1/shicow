@@ -8962,32 +8962,16 @@ end,nil)
 end
 end
 
-if text == "المطور" or text == "مطور" then
-local TEXT_SUD = bot_data:get(ban_id..'TEXT_SUDO')
-if TEXT_SUDO then 
-send(msg.chat_id_, msg.id_,TEXT_SUDO)
-else
-tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result) 
-local function taha(extra, taha, success)
-if taha.photos_[0] then
-local Name = '᥀︙ 𝐷𝑉 𝑁𝐴𝑀𝐸 ↫ ['..result.first_name_..'](tg://user?id='..result.id_..')\n'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
-},
-{
-{text = '᥀︙أضف البوت لمجموعتك︙᥀' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-else 
-sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
- end end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = SUDO, offset_ = 0, limit_ = 1 }, taha, nil)
+if text == 'المطور' or text == 'مطور' then 
+tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)  
+local msg_id = msg.id_/2097152/0.5 
+local Text = "DEV NAME -> "..result.first_name_.."\nDEV USER -> [@"..result.username_.."]\nDEV ID -> "..SUDO..""
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = result.first_name_,url="t.me/"..result.username_}}, 
+} 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end,nil)
-end
 end
 ------------------------------------------------------------------------ adddevsoudogp2 
 if text == ("رفع مطور مجموعه") and tonumber(msg.reply_to_message_id_) ~= 0 and msa3d(msg) and  SirSudoGp(msg)  then
@@ -15899,7 +15883,7 @@ Msᴀɢ ~ #msgs
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 🇪🇬 ꙰  - 𝚞 𝚜𝚎 𝚛 ➟ #username  ❃.
 🇪🇬 ꙰  - 𝚖 𝚜𝚐 𝚜 ➟ #msgs ❃.
-🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
+🇪🇬 ꙰  - 𝚐 𝚖 𝚊??  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝𝚊   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 🇪🇬 ꙰  - 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ 
@@ -18355,9 +18339,6 @@ keyboard.inline_keyboard = {
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18436,9 +18417,6 @@ keyboard.inline_keyboard = {
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18451,7 +18429,7 @@ return false
 end
 local Teext =[[
 لاوامر الرتب اتبع الازرار اسفل القائمه
-❂••••••••••☾𝐽??𝐶𝐾 ☽••••••••••❂
+❂••••••••••☾𝐽𝐴𝐶𝐾☽••••••••••❂
 ]]
 keyboard.inline_keyboard = {
 {
@@ -18470,13 +18448,7 @@ keyboard.inline_keyboard = {
 {text="• مسح المميزين◍",callback_data="/DelVipMem"},{text="• القائمه الرئيسيه◍",callback_data="/DelList"}
 },
 {
-{text ='◍Ch JACK◍',url="t.me/Source_JACK"}
-},
-{
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18560,9 +18532,6 @@ keyboard.inline_keyboard = {
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18605,9 +18574,6 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18677,9 +18643,6 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -22544,7 +22507,7 @@ bot_data:srem(ban_id..'S00F4:MN:TF'..msg.chat_id_, data.sender_user_id_)
 bot_data:srem(ban_id..'Special:User'..msg.chat_id_, data.sender_user_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴??𝐾 ⇣',url='http://t.me/Source_JACK'}},
+{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣',url='http://t.me/Source_JACK'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" ᥀︙  تم تنزيلك من جميع الرتب")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
