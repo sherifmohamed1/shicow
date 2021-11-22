@@ -8965,7 +8965,7 @@ end
 if text == 'المطور' or text == 'مطور' then 
 tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)  
 local msg_id = msg.id_/2097152/0.5 
-local Text = "DEV NAME -> "..result.first_name_.."\nDEV USER -> [@"..result.username_.."]\nDEV ID -> "..SUDO..""
+local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..result.first_name_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴𝚁 ~[@"..result.username_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..SUDO..""
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = result.first_name_,url="t.me/"..result.username_}}, 
@@ -15460,7 +15460,7 @@ local List = {
 ┇𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ .
 ]],
 [[
-⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ★
+⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎?? 𝑻𝒐 ★
 ᥀︙↫ 𝑼𝑬𝑺 : #username ‌‌‏⚚
 ᥀︙↫ 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
 ᥀︙↫ 𝑰𝑫 : #id ‌‌‏♕
