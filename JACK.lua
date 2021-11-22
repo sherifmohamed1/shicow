@@ -4098,16 +4098,16 @@ send(msg.chat_id_, msg.id_,' ᥀︙هذا الامر ليس لـك ياعزيز�
 return false
 end
 local Text =[[
-᥀︙  ااهلا بك في قائمة الاوامر الخاصه بالبوت اختر الامر الذي تريده من اسفل القائمه↫ ⤈ 
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
-᥀︙ 💎 ↫ اوامر الحمايه
-᥀︙ 💎 ↫ اوامر الادمنيه
-᥀︙ 💥 ↫ اوامر المدراء
-᥀︙  ↫ اوامر المنشئين
-᥀︙↫ اوامر المطورين🌖
-᥀︙ 💭 ↫ اوامر الاعضاء
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
- [᥀︙𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗦𝗢𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀](https://t.me/Source_JACK)
+⇊ قائمه الاوامر اليك في الاسفل ⇊
+◍- - - - - - - -×- - - - - - - -◍
+᥀︙🌖↫ اوامر الحمايه ~ ⓵
+᥀︙🌖↫ اوامر الادمنيه ~ ②
+᥀︙🌖↫ اوامر المدراء ~ ③
+᥀︙🌖↫ اوامر المنشئين ~ ④
+᥀︙🌖↫اوامر المطورين ~ ⑤
+᥀︙🌖↫ اوامر الاعضاء ~ ⑥
+◍- - - - - - - -×- - - - - - - -◍
+ [᥀︙𝐶𝐻 𝐽𝐴𝐶𝐾︙᥀ ](https://t.me/Source_JACK)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -14863,79 +14863,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, l
 end,nil)
 end
 
-if text == "معلومات الجروب" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
-tdcli_function ({ID = "GetChannelFull",user_id_ = ban_id},function(extra,result,success)
-if result.username_ then
-username = result.username_ 
-else
-username = 'Sh_e_t_o_s1'
-end
-local msg_id = msg.id_/2097152/0.5  
-local textt = 'رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local Sasa = 'https://t.me/xxxcccvvbbnn/903'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = textt, url="http://t.me/"..username},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Sasa).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
-end
-
-if text == "انا مين" then
-local my_ph = bot_data:get(ban_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ᥀︙ انا مين معطله") 
-return false  
-end
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-if result.username_ then
-username = result.username_ 
-else
-username = 'Source_JACK'
-end
-local msg_id = msg.id_/2097152/0.5  
-local textt = ' ❤️ انت يا قلبي '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local siria = 'https://t.me/@SH_YCO'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = textt, url="http://t.me/"..username},
-},
-{
-{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(siria).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
-end
-if text == "تعطيل انا مين"  and Manager(msg) then   
-if Constructor(msg) then  
-bot_data:del(ban_id.."my_anamen:status"..msg.chat_id_) 
-send(msg.chat_id_, msg.id_," ᥀︙  تـم تـعـطـيل انا مين") 
-return false end
-end
-if text == "تفعيل انا مين"  and Manager(msg) then   
-if Constructor(msg) then  
-bot_data:set(ban_id.."my_anamen:status"..msg.chat_id_,true) 
-send(msg.chat_id_, msg.id_," ᥀︙  تـم تـفعـيل انا مين") 
-return false  
-end
-end
-if string.find(text,"ضافني") or string.find(text,"ضفني") then
+find(text,"ضافني") or string.find(text,"ضفني") then
 if not bot_data:get(ban_id..'Added:Me'..msg.chat_id_) then
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da and da.status_.ID == "ChatMemberStatusCreator" then
@@ -18382,9 +18310,6 @@ keyboard.inline_keyboard = {
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18398,7 +18323,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⇊ ❨اوامر التفعيل❩ والتعطي ᥀︙ 
+⇊ ❨اوامر التفعيل❩ والتعطيل ⇊ 
 ❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
 ]]
 keyboard = {} 
@@ -18449,9 +18374,6 @@ keyboard.inline_keyboard = {
 {text = 'تفعيل نسبة الرجوله', callback_data="/lockman"},{text = 'تعطيل  نسبة الرجوله', callback_data="/opamanh"},
 },
 {
-{text = 'تفعيل نسبه جمالي', callback_data="/lockgmale"},{text = 'تعطيل نسبه جمالي', callback_data="/opagmale"},
-},
-{
 {text = 'تفعيل حساب العمر', callback_data="/lockamr"},{text = 'تعطيل حساب العمر', callback_data="/opamar"},
 },
 {
@@ -18462,9 +18384,6 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18478,7 +18397,7 @@ return false
 end
 local Teext =[[
 لاوامر الرتب اتبع الازرار اسفل القائمه
-❂••••••••••☾𝐽??𝐶𝐾 ☽••••••••••❂
+❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
 ]]
 keyboard.inline_keyboard = {
 {
@@ -18497,13 +18416,7 @@ keyboard.inline_keyboard = {
 {text="• مسح المميزين◍",callback_data="/DelVipMem"},{text="• القائمه الرئيسيه◍",callback_data="/DelList"}
 },
 {
-{text ='◍Ch JACK◍',url="t.me/Source_JACK"}
-},
-{
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18587,9 +18500,6 @@ keyboard.inline_keyboard = {
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18626,7 +18536,7 @@ local Teext =[[
 ᥀︙ تحويل + بالرد ↫ صوره◍ملصق◍صوت◍بصمه
 ᥀︙ انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
 ❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
- [᥀︙ 𝐶𝐻 𝐽𝐴𝐶𝐾 ᥀︙ ](https://t.me/Source_JACK)
+ [᥀︙𝐶𝐻 𝐽𝐴𝐶𝐾︙᥀](https://t.me/Source_JACK)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -18698,15 +18608,12 @@ local Teext =[[
 ᥀︙ تقييد يوم + عدد الايام
 ᥀︙ الغاء تقييد ↫ لالغاء التقييد بالوقت
 ❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
- [᥀︙ 𝐶𝐻 𝐽𝐴𝐶𝐾 ᥀︙ ](https://t.me/Source_JACK)
+ [᥀︙𝐶𝐻 𝐽𝐴𝐶𝐾︙᥀ ](https://t.me/Source_JACK)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
 {text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-{
-{text ='◍اخفاء الكليشه◍', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18724,16 +18631,16 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-᥀︙ اهلا بك في قائمة الاوامر ↫ ⤈ 
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
-᥀︙ 💎 ↫ اوامر الحمايه
-᥀︙ 💎 ↫ اوامر الادمنيه
-᥀︙ 💥 ↫ اوامر المدراء
-᥀︙ م4 ↫ اوامر المنشئين
-᥀︙ اوامر المطورين🌖
-᥀︙ 💭 ↫ اوامر الاعضاء
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
- [᥀︙ 𝐶𝐻 𝐽𝐴𝐶𝐾 ᥀︙ ](https://t.me/Source_JACK)
+⇊ قائمه الاوامر اليك في الاسفل ⇊
+◍- - - - - - - -×- - - - - - - -◍
+᥀︙🌖↫ اوامر الحمايه ~ ⓵
+᥀︙🌖↫ اوامر الادمنيه ~ ②
+᥀︙🌖↫ اوامر المدراء ~ ③
+᥀︙🌖↫ اوامر المنشئين ~ ④
+᥀︙🌖↫اوامر المطورين ~ ⑤
+᥀︙🌖↫ اوامر الاعضاء ~ ⑥
+◍- - - - - - - -×- - - - - - - -◍
+ [᥀︙𝐶𝐻 𝐽𝐴𝐶𝐾︙᥀ ](https://t.me/Source_JACK)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
