@@ -155,7 +155,7 @@ print([[
   \ | _____ |           
 
 > CH › ❨@Source_JACK❩
-~> DEVELOPER › @@SH_YCO 
+~> DEVELOPER › @SH_YCO 
 ]])
 sudos = dofile("./Info.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -4331,7 +4331,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 𝑆𝐻𝑌𝐶𝑂',url="t.me/@SH_YCO"}},
+{{text = ' 𝑆𝐻𝑌𝐶𝑂',url="t.me/SH_YCO"}},
 {{text = 'لــقــنــوات', callback_data="/Ajobanf"},{text ='الــبــارات ᥀︙', callback_data="/banfai"}},  
 {{text = 'لــبــوتــات', callback_data="/gqjik"}},
 }
@@ -15186,7 +15186,7 @@ local List = {
 • ❉ 𝑺𝑻𝑨 : #stast .
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
-• ❉ 𝑾𝒆𝒍𝒄??𝒎𝒆  ⁞ .
+• ❉ 𝑾𝒆𝒍𝒄????𝒆  ⁞ .
 • ❉ 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ .
 ]],
 [[
@@ -19210,7 +19210,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/@SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/shyco"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19237,7 +19237,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/@SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/shyco"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19264,7 +19264,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/@SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/shyco"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19291,7 +19291,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/@SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/shyco"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19326,7 +19326,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂',url="t.me/@SH_YCO"},{text ='᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂',url="t.me/SH_YCO"},{text ='᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝑇𝐴𝑊𝑂𝑆𝐿',url="t.me/JANKES_BOT"}}, 
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/change-hhh"}},
 }
@@ -19344,7 +19344,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶??', url="t.me/@SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶??', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/change-hhh"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19377,7 +19377,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text ='᥀︙ 𝑆𝐻𝑌𝐶𝑂',url="t.me/@SH_YCO"},{text ='᥀︙ 𝑇𝐼𝐺𝐸𝑅',url="t.me/Oo_tiger"}},
+{{text ='᥀︙ 𝑆𝐻𝑌𝐶𝑂',url="t.me/SH_YCO"},{text ='᥀︙ 𝑇𝐼𝐺𝐸𝑅',url="t.me/Oo_tiger"}},
 {{text ='᥀︙ 𝑇𝐴𝑊𝑂𝑆𝐿',url="t.me/JANKES_BOT"},{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
 {{text ='᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/rob5t"}},
 }
@@ -19606,7 +19606,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text ='᥀︙ 𝑆𝐻𝑌𝐶𝑂"𝐽𝐾...🇹🇷',url="t.me/@SH_YCO"}},
+{{text ='᥀︙ 𝑆𝐻𝑌𝐶𝑂"𝐽𝐾...🇹🇷',url="t.me/SH_YCO"}},
 {{text ='الــقــنــوات ᥀︙ ', callback_data="/Ajobanf"},{text ='◍الــبــارات•', callback_data="/banfai"}},  
 {{text ='الــبــوتــات ᥀︙', callback_data="/gqjik"}},
 }
@@ -19717,7 +19717,7 @@ end
 if Text == '/units' then
 local Teext =[[
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-🌏︙𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 ??𝑶𝑼𝑹𝑪𝑬 𝑱𝑨𝑪𝑲
+🌏︙𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝑱𝑨𝑪𝑲
  ––––––––––––––––
 🌖︙𝑪𝑯𝑨𝑵𝑬𝑳 𝑻𝑬𝑨𝑴 𝑱𝑨𝑵𝑲𝑬𝑬𝑺
  ––––––––––––––––
@@ -19728,7 +19728,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂',url="t.me/@SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅',url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂',url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅',url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
