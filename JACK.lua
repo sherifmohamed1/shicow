@@ -18089,20 +18089,71 @@ https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='
 return false
 end
 
-if Text and Text:match("^(%d+)SirSudoGp(.*)$") then
+if Text and Text:match("^(%d+)BasicConstructor:Rd(.*)$") then
 local notId  = Text:match("(%d+)")  
-local userid = Text:gsub('SirSudoGp',''):gsub(notId,'')
+local userid = Text:gsub('BasicConstructor:Rd',''):gsub(notId,'')
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
 local notText ='◍︙عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-bot_data:srem(ban_id.."SirSudoGp", userid)
+bot_data:sadd(ban_id.."BasicConstructor:Rd", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '𝐽𝐴𝐶𝐾', url="t.me/Source_JACK"}},
 }
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*• تم رفعه مطور ثانوي مجموعه*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✹تم ترقيه العضو منشئ اساسي *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
+return false
+end
+
+if Text and Text:match("^(%d+)Constructor:Rd(.*)$") then
+local notId  = Text:match("(%d+)")  
+local userid = Text:gsub('Constructor:Rd',''):gsub(notId,'')
+if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
+local notText ='◍︙عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+bot_data:sadd(ban_id.."Constructor:Rd", userid)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝐽𝐴𝐶𝐾', url="t.me/Source_JACK"}},
+}
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✹تم ترقيه العضو منشئ *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
+return false
+end
+
+if Text and Text:match("^(%d+)Manager:Rd(.*)$") then
+local notId  = Text:match("(%d+)")  
+local userid = Text:gsub('Manager:Rd',''):gsub(notId,'')
+if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
+local notText ='◍︙عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+bot_data:sadd(ban_id.."Manager:Rd", userid)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝐽𝐴𝐶𝐾', url="t.me/Source_JACK"}},
+}
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✹تم ترقيه العضو مدير *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
+return false
+end
+
+if Text and Text:match("^(%d+)Special:Rd(.*)$") then
+local notId  = Text:match("(%d+)")  
+local userid = Text:gsub('Special:Rd',''):gsub(notId,'')
+if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
+local notText ='◍︙عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+bot_data:sadd(ban_id.."Special:Rd", userid)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝐽𝐴𝐶𝐾', url="t.me/Source_JACK"}},
+}
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✹تم ترقيه العضو مميز*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
 return false
 end
 
