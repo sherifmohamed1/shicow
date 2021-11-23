@@ -14755,7 +14755,7 @@ if not GeId.result.custom_title then
 send(msg.chat_id_, msg.id_,' ◉ وينك وين القب ') 
 else
 send(msg.chat_id_, msg.id_,' ◉ لقبك هو : '..GeId.result.custom_title) 
-end
+end,nil)
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -14770,7 +14770,7 @@ else
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Sasa).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
+end
 end
 
 if string.find(text,"ضافني") or string.find(text,"ضفني") then
