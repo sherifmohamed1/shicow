@@ -6146,55 +6146,6 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 end,nil)
 end,nil)
 end
-
-if text==('عدد الجروب') and Mod(msg) then  
-if msg.can_be_deleted_ == false then 
-send(msg.chat_id_,msg.id_," ᥀︙  البوت ليس ادمن \n") 
-return false  
-end 
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
-tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(arg,data) 
-local ban = '᥀︙  عدد الادمنيه : '..data.administrator_count_..
-'\n\n ᥀︙  عدد المطرودين : '..data.kicked_count_..
-'\n\n ᥀︙  عدد الاعضاء : '..data.member_count_..
-'\n\n ᥀︙  عدد رسائل الجروب : '..(msg.id_/2097152/0.5)..
-'\n\n ᥀︙   اسم الجروب : ['..ta.title_..']'
-send(msg.chat_id_, msg.id_, ban) 
-end,nil)
-end,nil)
-end 
-
-if text and text:match("^صيح (.*)$") then
-local username = text:match("^صيح (.*)$") 
-if not bot_data:get(ban_id..'Seh:User'..msg.chat_id_) then
-function start_function(extra, result, success)
-if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-send(msg.chat_id_, msg.id_,' ᥀︙  المعرف غلط ') 
-return false  
-end
-if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
-send(msg.chat_id_, msg.id_,' ᥀︙  لا استطيع اصيح معرف قنوات') 
-return false  
-end
-if result.type_.user_.type_.ID == "UserTypeBot" then
-send(msg.chat_id_, msg.id_,' ᥀︙  لا استطيع اصيح معرف بوتات') 
-return false  
-end
-if result and result.type_ and result.type_.channel_ and result.type_.channel_.is_supergroup_ == true then
-send(msg.chat_id_, msg.id_,'⚠| لا اسطيع صيح معرفات الجروبات') 
-return false  
-end
-if result.id_ then
-send(msg.chat_id_, msg.id_,' ᥀︙  😾تع يعم كلم الود دا قرفني [@❨'..username..'❩]') 
-return false
-end
-end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
-else
-send(msg.chat_id_, msg.id_,' ᥀︙  تم تعطيل امر صيح') 
-end
-return false
-end
 --------------------------------------------------------------------------------------------------------------
 if text == ("ايدي") and msg.reply_to_message_id_ == 0 and not bot_data:get(ban_id..'Bot:Id'..msg.chat_id_) then     
 if AddChannel(msg.sender_user_id_) == false then
@@ -15561,7 +15512,7 @@ Msᴀɢ ~ #msgs
 .𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
-.𖣂 𝙢𝙨𝙂?? , #msgs  🖤 ↴
+.𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
 .𖣂 𝗖𝗛 - ❨@Source_JACK❩ 💞.
 ]],
 [[
