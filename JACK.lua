@@ -14755,7 +14755,7 @@ if not GeId.result.custom_title then
 send(msg.chat_id_, msg.id_,' ◉ وينك وين القب ') 
 else
 send(msg.chat_id_, msg.id_,' ◉ لقبك هو : '..GeId.result.custom_title) 
-end,nil)
+end
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -18253,22 +18253,13 @@ keyboard.inline_keyboard = {
 {text = 'تفعيل مريم', callback_data="/Loumarem"},{text = 'تعطيل مريم', callback_data="/thomarem"},
 },
 {
-{text = 'تفعيل صورتي', callback_data="/lookpohi"},{text = 'تعطيل صورتي', callback_data="/opphotop"},
-},
-{
 {text = 'تفعيل الزخرفه', callback_data="/Lokzal"},{text = 'تعطيل الزخرفه', callback_data="/opeza"},
-},
-{
-{text = 'تفعيل  انا مين', callback_data="/lockanmen"},{text = 'تعطيل انا مين', callback_data="/oppganmen"},
 },
 {
 {text = 'تفعيل ضافني', callback_data="/lockbafne"},{text = 'تعطيل ضافني', callback_data="/opaDRGfe"},
 },
 {
 {text = 'تفعيل الالعاب', callback_data="/lockgams"},{text = 'تعطيل الالعاب', callback_data="/opagams"},
-},
-{
-{text = 'تفعيل الايدي', callback_data="/lockid"},{text = 'تعطيل الايدي', callback_data="/opaid"},
 },
 {
 {text = 'تفعيل الترحيب', callback_data="/lockwelcm"},{text = 'تعطيل الترحيب', callback_data="/opawelcm"},
@@ -18284,9 +18275,6 @@ keyboard.inline_keyboard = {
 },
 {
 {text = 'تفعيل نسبة الرجوله', callback_data="/lockman"},{text = 'تعطيل  نسبة الرجوله', callback_data="/opamanh"},
-},
-{
-{text = 'تفعيل نسبه جمالي', callback_data="/lockgmale"},{text = 'تعطيل نسبه جمالي', callback_data="/opagmale"},
 },
 {
 {text = 'تفعيل حساب العمر', callback_data="/lockamr"},{text = 'تعطيل حساب العمر', callback_data="/opamar"},
@@ -20812,38 +20800,7 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
-if Text == '/lockanmen' then
-if not Mod(data) then
-local notText = '✘ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Text ='◍تم تفعيل انا مين '
-bot_data:set(ban_id.."my_anamen:status"..Chat_id,true)  
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/oppganmen' then
-if not Mod(data) then
-local notText = '✘ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Text ='◍تم تعطيل انا مين '
-bot_data:del(ban_id.."my_anamen:status"..Chat_id)  
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
+
 if Text == '/Lokzal' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
@@ -20876,42 +20833,6 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
-if Text == '/lookpohi' then
-if not Mod(data) then
-local notText = '✘ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Text ='◍تم تفعيل صورتي '
-bot_data:set(ban_id.."my_photo:status"..Chat_id,true)  
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-
-if Text == '/opphotop' then
-if not Mod(data) then
-local notText = '✘ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Text ='◍تم تعطيل صورتي '
-bot_data:del(ban_id.."my_photo:status"..Chat_id)  
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-
 
 if Text == '/Loumarem' then
 if not Mod(data) then
