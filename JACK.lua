@@ -8918,7 +8918,7 @@ end
 if text == 'مساعد' or text == 'المساعد' then 
 tdcli_function ({ID = "msa3d:ban",user_id_ = SUDO},function(arg,result)  
 local msg_id = msg.id_/2097152/0.5 
-local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..result.first_name_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴?? ~[@"..result.username_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..msa3d:ban..""
+local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..result.first_name_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴?? ~[@"..result.username_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..msa3d..""
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = result.first_name_,url="t.me/"..result.username_}}, 
