@@ -6134,18 +6134,10 @@ local ban = '᥀︙  عدد الادمنيه : '..data.administrator_count_..
 '\n\n ᥀︙  عدد الاعضاء : '..data.member_count_..
 '\n\n ᥀︙  عدد رسائل الجروب : '..(msg.id_/2097152/0.5)..
 '\n\n ᥀︙   اسم الجروب : ['..ta.title_..']'
-local Name = '..'
-ban = {} 
-ban.inline_keyboard = {
-{{text = textt, url="http://t.me/"..username}},
-{{text = Banda, url="http://t.me/"..username}},
-{{text = HHhH, url="http://t.me/"..username}},
-{{text = bank, url="http://t.me/"..username}},
-}
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Name).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(ban)) 
+send(msg.chat_id_, msg.id_, ban) 
 end,nil)
 end,nil)
-end
+end 
 --------------------------------------------------------------------------------------------------------------
 if text == ("ايدي") and msg.reply_to_message_id_ == 0 and not bot_data:get(ban_id..'Bot:Id'..msg.chat_id_) then     
 if AddChannel(msg.sender_user_id_) == false then
@@ -14756,6 +14748,31 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, l
 end,nil)
 end
 
+if text == ' انا مين' and tonumber(msg.reply_to_message_id_) == 0 then
+Ge = https.request("https://api.telegram.org/bot"..token.."/getChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..msg.sender_user_id_)
+GeId = JSON.decode(Ge)
+if not GeId.result.custom_title then
+send(msg.chat_id_, msg.id_,' ◉ وينك وين القب ') 
+else
+send(msg.chat_id_, msg.id_,' ◉ لقبك هو : '..GeId.result.custom_title) 
+end
+end
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = textt, url="http://t.me/"..username},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Sasa).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end,nil)
+end
+
 if string.find(text,"ضافني") or string.find(text,"ضفني") then
 if not bot_data:get(ban_id..'Added:Me'..msg.chat_id_) then
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
@@ -15557,7 +15574,7 @@ Msᴀɢ ~ #msgs
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
 𝟓 𝟔 𖡻 #msgs  ࿇🦄
-𝟓 𝟔 𖡻 #auto  ࿇🦄
+𝟓 ?? 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
 𝟓 𝟔 𖡻 𝗖𝗛 - ❨@Source_JACK❩ 💞.
