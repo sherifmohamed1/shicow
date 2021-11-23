@@ -2033,24 +2033,6 @@ end,nil)
 end,nil)
 end 
 
-if text == 'تفعيل التواصل ' and Devban(msg) then  
-if bot_data:get(ban_id..'Tuasl:Bots') then
-bot_data:del(ban_id..'Tuasl:Bots') 
-Text = '\n ᥀︙  تم تفعيل التواصل ' 
-else
-Text = '\n ᥀︙  بالتاكيد تم تفعيل التواصل '
-end
-send(msg.chat_id_, msg.id_,Text) 
-end
-if text == 'تعطيل التواصل ' and Devban(msg) then  
-if not bot_data:get(ban_id..'Tuasl:Bots') then
-bot_data:set(ban_id..'Tuasl:Bots',true) 
-Text = '\n ᥀︙  تم تعطيل التواصل' 
-else
-Text = '\n ᥀︙  بالتاكيد تم تعطيل التواصل'
-end
-send(msg.chat_id_, msg.id_,Text) 
-end
 if text == 'تفعيل البوت الخدمي ' and Devban(msg) then  
 if bot_data:get(ban_id..'Free:Bots') then
 bot_data:del(ban_id..'Free:Bots') 
@@ -2307,7 +2289,6 @@ local Text = [[
  ––––––––––––––––
 [🇹🇷︙ 𝙱𝙴𝚁 𝚃𝙴𝙰𝙼 𝙹𝙰𝙽𝙺𝙴𝙴𝚂](t.me/JANK3S)
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -2315,18 +2296,6 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'التواصل'  then
-local Text = [[ 
-[TWL](t.me/xx_shicoo_xx_bot)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '✈ • تواصل السورس • ✈', url="t.me/xx_shicoo_xx_bot"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'معلومات الكيبورد' and Devban(msg) then
@@ -2391,16 +2360,16 @@ send(msg.chat_id_, msg.id_," ᥀︙  ارسل اليه الاسم الان ")
 return false
 end
 if text == 'تفعيل النسخه التلقائيه' and SudoBot(msg) then  
-send(msg.chat_id_, msg.id_,"*᥀︙︙تم تفعيل النسخه الاحتياطيه التلقائيه*") 
+send(msg.chat_id_, msg.id_,"*᥀︙تم تفعيل النسخه الاحتياطيه التلقائيه*") 
 bot_data:del(ban_id.."AutoFile")
 end
 if text == 'تعطيل النسخه التلقائيه' and SudoBot(msg) then  
-send(msg.chat_id_, msg.id_,"*᥀︙︙تم تعطيل النسخه الاحتياطيه التلقائيه*") 
+send(msg.chat_id_, msg.id_,"*᥀︙تم تعطيل النسخه الاحتياطيه التلقائيه*") 
 bot_data:set(ban_id.."AutoFile",true) 
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = bot_data:smembers(ban_id.."Dev:ban:2")
-t = "\n ᥀︙  قائمة مطورين الثانويين للبوت \n❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂\n"
+t = "\n ᥀︙ قائمة مطورين الثانويين للبوت \n❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -2446,7 +2415,7 @@ return false
 end
 if text == ("المطورين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'Sudo:User')
-t = "\n *᥀︙قائمة مطورين البوت* \n*━━━━𝐉𝐀𝐂𝐊 ━━━━*\n"
+t = "\n *᥀︙قائمة مطورين البوت* \n*❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂*\n"
 keyboard = {
 {{text = 'مسح المطورين',callback_data=msg.sender_user_id_.."DelLsta".."55"}},
 }
@@ -2547,10 +2516,10 @@ sendok = sendok + 1
 end
 if #pv == i then 
 if sendok == 0 then
-send(msg.chat_id_, msg.id_,' ᥀︙  لا يوجد مشتركين وهميين في البوت \n')   
+send(msg.chat_id_, msg.id_,' ᥀︙لا يوجد مشتركين وهميين في البوت \n')   
 else
 local ok = #pv - sendok
-send(msg.chat_id_, msg.id_,' ᥀︙  عدد المشتركين الان  ↫ ( '..#pv..' )\n ᥀︙  تم ازالة  ↫ ( '..sendok..' ) من المشتركين\n ᥀︙   الان عدد المشتركين الحقيقي  ↫ ( '..ok..' ) مشترك \n')   
+send(msg.chat_id_, msg.id_,' ᥀︙عدد المشتركين الان  ↫ ( '..#pv..' )\n ᥀︙تم ازالة  ↫ ( '..sendok..' ) من المشتركين\n ᥀︙الان عدد المشتركين الحقيقي  ↫ ( '..ok..' ) مشترك \n')   
 end
 end
 end,nil)
@@ -2593,7 +2562,7 @@ w = w + 1
 end
 if #group == i then 
 if (w + q) == 0 then
-send(msg.chat_id_, msg.id_,' ᥀︙  لا يوجد جروبات وهميه في البوت\n')   
+send(msg.chat_id_, msg.id_,' ᥀︙لا يوجد جروبات وهميه في البوت\n')   
 else
 local JACK = (w + q)
 local sendok = #group - JACK
@@ -2607,7 +2576,7 @@ JACKk = ''
 else
 JACKk = '\n ᥀︙  تم ازالة  ↫ ❨ '..w..' ❩ جروب لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,' ᥀︙   عدد الجروبات الان  ↫ ❨ '..#group..' ❩'..JACKk..''..JACK..'\n ᥀︙   الان عدد الجروبات الحقيقي  ↫ ❨ '..sendok..' ❩ جروبات\n')   
+send(msg.chat_id_, msg.id_,' ᥀︙عدد الجروبات الان  ↫ ❨ '..#group..' ❩'..JACKk..''..JACK..'\n ᥀︙   الان عدد الجروبات الحقيقي  ↫ ❨ '..sendok..' ❩ جروبات\n')   
 end
 end
 end,nil)
@@ -2634,11 +2603,11 @@ send(msg.chat_id_,msg.id_," ᥀︙  عذرا عزيزي المستخدم هاذ�
 return false 
 end      
 bot_data:sadd(ban_id..'Sudo:User', result.id_)
-usertext = '\n ᥀︙  الـعـضو   ↫ ['..result.title_..'](t.me/'..(username or 'Source_JACK')..')'
-status  = '\n ᥀︙  تم ترقيته مطور'
+usertext = '\n ᥀︙الـعـضو↫ ['..result.title_..'](t.me/'..(username or 'Source_JACK')..')'
+status  = '\n ᥀︙تم ترقيته مطور'
 texts = usertext..status
 else
-texts = ' ᥀︙  لا يوجد حساب بهاذا المعرف'
+texts = ' ᥀︙لا يوجد حساب بهاذا المعرف'
 end
 send(msg.chat_id_, msg.id_, texts)
 end
@@ -2659,12 +2628,12 @@ end
 bot_data:sadd(ban_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n ᥀︙  الـعـضو   ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'Source_JACK')..')'
-status  = '\n ᥀︙  تم ترقيته مطور'
+usertext = '\n ᥀︙الـعـضو   ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'Source_JACK')..')'
+status  = '\n ᥀︙تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
-usertext = '\n ᥀︙  الـعـضو   ↫ '..userid..''
-status  = '\n ᥀︙  تم ترقيته مطور'
+usertext = '\n ᥀︙الـعـضو ↫ '..userid..''
+status  = '\n ᥀︙تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
@@ -2676,18 +2645,18 @@ local Source_JACK = bot_data:get(ban_id..'text:ch:user')
 if Source_JACK then
 send(msg.chat_id_, msg.id_,'['..Source_JACK..']')
 else
-send(msg.chat_id_, msg.id_,' ᥀︙  لا تستطيع استخدام البوت \n ᥀︙   يرجى الاشتراك بالقناه اولا \n ᥀︙   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ᥀︙لا تستطيع استخدام البوت \n ᥀︙   يرجى الاشتراك بالقناه اولا \n ᥀︙   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
 function start_function(extra, result, success)
 if result.id_ then
 bot_data:srem(ban_id..'Sudo:User', result.id_)
-usertext = '\n ᥀︙  الـعـضو   ↫ ['..result.title_..'](t.me/'..(username or 'Source_JACK')..')'
-status  = '\n ᥀︙  تم تنزيله من المطورين'
+usertext = '\n ᥀︙الـعـضو↫ ['..result.title_..'](t.me/'..(username or 'Source_JACK')..')'
+status  = '\n ᥀︙تم تنزيله من المطورين'
 texts = usertext..status
 else
-texts = ' ᥀︙  لا يوجد حساب بهاذا المعرف'
+texts = ' ᥀︙لا يوجد حساب بهاذا المعرف'
 end
 send(msg.chat_id_, msg.id_, texts)
 end
@@ -2942,7 +2911,7 @@ keyboard.inline_keyboard = {
 {text ='رفع الادمنيه', callback_data="/admen2"},
 },
 {
-{text ='اخفاء الكليشه', callback_data="/hide"},
+{text ='اخفاء الامر ✅', callback_data="/hide"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3036,7 +3005,7 @@ elseif da.status_.ID == "ChatMemberStatusEditor" then
 var = 'مشرف'
 end
 if bot_data :sismember(ban_id ..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,' ᥀︙  الـجـروب مـفعـل مـن قبـل')
+send(msg.chat_id_, msg.id_,' ᥀︙الـجـروب مـفعـل مـن قبـل')
 else
 local Text ='• قم بختيار الرقم الصحيح الموجود في الصوره\n• ليتم الغاء تقييدك الان'
 keyboard = {} 
@@ -3107,7 +3076,7 @@ end
 if num2 == 0 then
 send(msg.chat_id_, msg.id_," ") 
 else
-send(msg.chat_id_, msg.id_,"᥀︙  تمت ترقيه ❮ "..num2.." ❯ من الادمنيه") 
+send(msg.chat_id_, msg.id_,"᥀︙تمت ترقيه ❮ "..num2.." ❯ من الادمنيه") 
 end
 end,nil)   
 end
@@ -3287,10 +3256,10 @@ if result.photos_[0] then
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '᥀︙ مــطــور الــبــوت ↫', url="http://t.me/"..sudos.UserName},
+{text = 'مـطـور الـبـوت 🔰', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '᥀︙ أضف البوت لمجموعتك', url = "https://t.me/"..data.username_.."?startgroup=new"},
+{text = 'أضف البوت لمجموعتك ✅', url = "https://t.me/"..data.username_.."?startgroup=new"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3305,7 +3274,7 @@ if msg.content_.ID == "MessageChatJoinByLink" then
 local Text =' '
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ أضف البوت لمجموعتك' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}},
+{{text = 'أضف البوت لمجموعتك ✅' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/comxnxp/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6153,6 +6122,31 @@ end
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
 end
+
+if text==('معلومات الجروب') and Mod(msg) then  
+if msg.can_be_deleted_ == false then 
+send(msg.chat_id_,msg.id_," ● البوت ليس ادمن \n") 
+return false  
+end 
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
+tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(arg,data) 
+local textt = ' ● عدد الادمنيه : '..data.administrator_count_..
+local Banda = ' ● عدد المطرودين : '..data.kicked_count_..
+local HHhH = ' ● عدد الاعضاء : '..data.member_count_..
+local bank = ' ● عدد رسائل الجروب : '..(msg.id_/2097152/0.5)..
+local Name = '..'
+ban = {} 
+ban.inline_keyboard = {
+{{text = textt, url="http://t.me/"..username}},
+{{text = Banda, url="http://t.me/"..username}},
+{{text = HHhH, url="http://t.me/"..username}},
+{{text = bank, url="http://t.me/"..username}},
+}
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Name).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(ban)) 
+end,nil)
+end,nil)
+end
+
 if text==('عدد الجروب') and Mod(msg) then  
 if msg.can_be_deleted_ == false then 
 send(msg.chat_id_,msg.id_," ᥀︙  البوت ليس ادمن \n") 
@@ -6281,7 +6275,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🖤 ↫ 𝑈𝑆𝐸𝑅 : '..username..' \n🖤 ↫ 𝑀𝑆?? : '..Msguser..' \n🖤 ↫ 𝑅𝐴𝑁𝐾 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n🖤 ↫ 𝐼𝐷  :  '..msg.sender_user_id_..' \n🖤 ↫ 𝐵𝐼𝑂 : '..getbioY..' \n🖤 ↫ 𝐶𝐻  : @Source_JACK \n \n\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🖤 ↫ 𝑈𝑆𝐸𝑅 : '..username..' \n🖤 ↫ ??𝑆?? : '..Msguser..' \n🖤 ↫ 𝑅𝐴𝑁𝐾 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n🖤 ↫ 𝐼𝐷  :  '..msg.sender_user_id_..' \n🖤 ↫ 𝐵𝐼𝑂 : '..getbioY..' \n🖤 ↫ 𝐶𝐻  : @Source_JACK \n \n\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي ❨'..Name..'❩ \n¦• 𝚄𝚂𝙴𝚁 ↝  ❨'..Name..'❩    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ ❨'..Msguser..'❩.   ↝💘\n ¦• 𝚁𝙰𝙽??↝ ❨'..Rutba(msg.sender_user_id_,msg.chat_id_)..'❩    ↝💘\n¦• 𝙸𝙳↝  ❨'..msg.sender_user_id_..'❩    ↝💘\n¦• 𝒄𝒉↝   ❨@Source_JACK❩ ↝🇧??\n')
@@ -8913,18 +8907,6 @@ bot_data:del(rob_id.."id:msa3d:rob")
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_WESTON, nil)
 return false 
-end
-
-if text == 'معلومات الجروب' or text == 'ةيةاياتيتي' then 
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
-local msg_id = msg.id_/2097152/0.5 
-local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..data.administrator_count_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴?? ~[@"..data.member_count_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..ta.title_..""
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = result.first_name_,url="t.me/"..result.username_}}, 
-} 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end,nil)
 end
 
 if text == "مارتن" then
@@ -15117,7 +15099,7 @@ local List = {
 𖤂 ~ 𝑚??𝑔 #msgs ??
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
-?? ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
+𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
 𖤂 ~ 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ .
 ]],
 [[
