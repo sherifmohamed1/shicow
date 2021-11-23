@@ -8915,10 +8915,10 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false 
 end
 
-if text == 'مساعد' or text == 'المساعد' then 
-tdcli_function ({ID = "msa3d:ban",user_id_ = SUDO},function(arg,result)  
+if text == 'معلومات الجروب' or text == 'ةيةاياتيتي' then 
+tdcli_function ({ID = "GetChat",user_id_ = SUDO},function(arg,result)  
 local msg_id = msg.id_/2097152/0.5 
-local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..result.first_name_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴?? ~[@"..result.username_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..msa3d..""
+local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..data.administrator_count_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴?? ~[@"..data.member_count_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..ta.title_..""
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = result.first_name_,url="t.me/"..result.username_}}, 
