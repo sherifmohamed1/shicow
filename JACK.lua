@@ -10361,9 +10361,7 @@ local keyboard = {
 {{text =' مساعد',callback_data=msg.sender_user_id_.."msa3d:ban"..result.sender_user_id_}},
 {{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_},{text =' ثانوي مجموعه',callback_data=msg.sender_user_id_.."SirSudoGp"..result.sender_user_id_}},
 {{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_},{text =' مطور مجموعه',callback_data=msg.sender_user_id_.."SudoBotGp"..result.sender_user_id_}},
-{{text ='◍ منشئ اساسي',callback_data=data.sender_user_id_.."Basic"..userid},{text ='◍ منشئ',callback_data=data.sender_user_id_.."Constructor"..userid}},
-{{text ='◍ مدير',callback_data=data.sender_user_id_.."Manager"..userid}},
-{{text ='◍ ادمن',callback_data=data.sender_user_id_.."mod"..userid},{text ='◍ مميز',callback_data=data.sender_user_id_.."Special"..userid}},
+{{text ='منشئ اساسي',callback_data=msg.sender_user_id_.."BasicConstructor:Rd"..result.sender_user_id_},{text ='منشئ',callback_data=msg.sender_user_id_.."Constructor:Rd"..result.sender_user_id_}},
 {{text ='᥀︙𝗦𝗢𝗨𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -19292,7 +19290,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸??', url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/shyco"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
