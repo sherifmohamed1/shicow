@@ -6130,10 +6130,10 @@ return false
 end 
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(arg,data) 
-local textt = ' ● عدد الادمنيه : '..data.administrator_count_..
-local Banda = ' ● عدد المطرودين : '..data.kicked_count_..
-local HHhH = ' ● عدد الاعضاء : '..data.member_count_..
-local bank = ' ● عدد رسائل الجروب : '..(msg.id_/2097152/0.5)..
+local textt = ' ● عدد الادمنيه : '..data.administrator_count_
+local Banda = ' ● عدد المطرودين : '..data.kicked_count_
+local HHhH = ' ● عدد الاعضاء : '..data.member_count_
+local bank = ' ● عدد رسائل الجروب : '..(msg.id_/2097152/0.5)
 local Name = '..'
 ban = {} 
 ban.inline_keyboard = {
@@ -6275,7 +6275,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🖤 ↫ 𝑈𝑆𝐸𝑅 : '..username..' \n🖤 ↫ ??𝑆?? : '..Msguser..' \n🖤 ↫ 𝑅𝐴𝑁𝐾 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n🖤 ↫ 𝐼𝐷  :  '..msg.sender_user_id_..' \n🖤 ↫ 𝐵𝐼𝑂 : '..getbioY..' \n🖤 ↫ 𝐶𝐻  : @Source_JACK \n \n\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🖤 ↫ 𝑈𝑆𝐸𝑅 : '..username..' \n🖤 ↫ 𝑀𝑆?? : '..Msguser..' \n🖤 ↫ 𝑅𝐴𝑁𝐾 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n🖤 ↫ 𝐼𝐷  :  '..msg.sender_user_id_..' \n🖤 ↫ 𝐵𝐼𝑂 : '..getbioY..' \n🖤 ↫ 𝐶𝐻  : @Source_JACK \n \n\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي ❨'..Name..'❩ \n¦• 𝚄𝚂𝙴𝚁 ↝  ❨'..Name..'❩    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ ❨'..Msguser..'❩.   ↝💘\n ¦• 𝚁𝙰𝙽??↝ ❨'..Rutba(msg.sender_user_id_,msg.chat_id_)..'❩    ↝💘\n¦• 𝙸𝙳↝  ❨'..msg.sender_user_id_..'❩    ↝💘\n¦• 𝒄𝒉↝   ❨@Source_JACK❩ ↝🇧??\n')
@@ -15561,7 +15561,7 @@ Msᴀɢ ~ #msgs
 .𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
-.𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
+.𖣂 𝙢𝙨𝙂?? , #msgs  🖤 ↴
 .𖣂 𝗖𝗛 - ❨@Source_JACK❩ 💞.
 ]],
 [[
