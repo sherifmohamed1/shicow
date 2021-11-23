@@ -6122,18 +6122,18 @@ end
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
 end
-
-if text==('معلومات الجروب') and Mod(msg) then  
+if text==('عدد الجروب') and Mod(msg) then  
 if msg.can_be_deleted_ == false then 
-send(msg.chat_id_,msg.id_," ● البوت ليس ادمن \n") 
+send(msg.chat_id_,msg.id_," ᥀︙  البوت ليس ادمن \n") 
 return false  
 end 
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(arg,data) 
-local textt = ' ● عدد الادمنيه : '..data.administrator_count_
-local Banda = ' ● عدد المطرودين : '..data.kicked_count_
-local HHhH = ' ● عدد الاعضاء : '..data.member_count_
-local bank = ' ● عدد رسائل الجروب : '..(msg.id_/2097152/0.5)
+local ban = '᥀︙  عدد الادمنيه : '..data.administrator_count_..
+'\n\n ᥀︙  عدد المطرودين : '..data.kicked_count_..
+'\n\n ᥀︙  عدد الاعضاء : '..data.member_count_..
+'\n\n ᥀︙  عدد رسائل الجروب : '..(msg.id_/2097152/0.5)..
+'\n\n ᥀︙   اسم الجروب : ['..ta.title_..']'
 local Name = '..'
 ban = {} 
 ban.inline_keyboard = {
@@ -15194,7 +15194,7 @@ local List = {
 • ❉ 𝑺𝑻𝑨 : #stast .
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
-• ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
+• ❉ 𝑾𝒆𝒍𝒄??𝒎𝒆  ⁞ .
 • ❉ 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ .
 ]],
 [[
