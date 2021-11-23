@@ -10362,6 +10362,8 @@ local keyboard = {
 {{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_},{text =' ثانوي مجموعه',callback_data=msg.sender_user_id_.."SirSudoGp"..result.sender_user_id_}},
 {{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_},{text =' مطور مجموعه',callback_data=msg.sender_user_id_.."SudoBotGp"..result.sender_user_id_}},
 {{text ='منشئ اساسي',callback_data=msg.sender_user_id_.."BasicConstructor:Rd"..result.sender_user_id_},{text ='منشئ',callback_data=msg.sender_user_id_.."Constructor:Rd"..result.sender_user_id_}},
+{{text =' مدير',callback_data=msg.sender_user_id_.."Manager:Rd"..result.sender_user_id_}},
+{{text ='ادمن',callback_data=msg.sender_user_id_.."Mod:Rd"..result.sender_user_id_},{text ='مميز',callback_data=msg.sender_user_id_.."Special:Rd"..result.sender_user_id_}},
 {{text ='᥀︙𝗦𝗢𝗨𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -12922,7 +12924,7 @@ local text =
 ' }\n'..' ᥀︙   الايدي  ↫ { '..idgp..
 ' }\n'..' ᥀︙   الايدي بالصوره  ↫ { '..idph..
 ' }\n'..' ᥀︙   الرفع  ↫ { '..setadd..
-' }\n'..' ᥀︙   الحظر  ↫ { '..DRGm..' }\n\n❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂\n ᥀︙  قناة سورس جاك↓\n━━━━━━━\n'
+' }\n'..' ᥀︙   الحظر  ↫ { '..DRGm..' }\n\n❂••••••••••☾𝐽𝐴𝐶?? ☽••••••••••❂\n ᥀︙  قناة سورس جاك↓\n━━━━━━━\n'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text ='◍اخفاء الكليشه◍', callback_data="/hide"}},}
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(text).."&reply_to_message_id=markdown&reply_markup="..JSON.encode(keyboard)) 
@@ -19290,7 +19292,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸??', url="t.me/Oo_tiger"}},
+{{text = '᥀︙ 𝑆𝐻𝑌𝐶𝑂', url="t.me/SH_YCO"},{text = '᥀︙ 𝑇𝐼𝐺𝐸𝑅', url="t.me/Oo_tiger"}},
 {{text = '᥀︙ 𝙱𝙰𝙲𝙺↵', callback_data="/shyco"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
