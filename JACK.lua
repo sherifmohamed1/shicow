@@ -8894,7 +8894,7 @@ bot_data:set(ban_id.."id:msa3d:ban", userid)
 Reply_Status(msg,userid,"reply","᥀︙  تم ترقيته مساعد في البوت")  
 return false 
 end
-if text == ("تنزيل المساعد") and SudoBot(msg) then
+if text == ("تنزيل مساعد") and SudoBot(msg) then
 function Function_WESTON(extra, result, success)
 local id = bot_data:get(rob_id.."id:msa3d:rob")
 Reply_Status(msg,id,"reply","• تم تنزيله من المساعد\n√")  
@@ -8914,25 +8914,17 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_WESTON, nil)
 return false 
 end
-if text == ("مسح المساعد") and SudoBot(msg) then
-bot_data:del(ban_id.."id:msa3d:rob")
-send(msg.chat_id_, msg.id_, "\n ᥀︙تم تنزيل المساعد")
-end
-if text == "المساعد" or text == "مساعد" then
-local id = bot_data:get(ban_id.."id:msa3d:ban")
-local urrl = https.request('https://api.telegram.org/bot'..token..'/getchat?chat_id='..id)
-local json = JSON.decode(urrl)
-local name = json.result.first_name
-if json.result.username then
-username = json.result.username
-else
-username = 'Source_JACK'
-end
-local Name = '〈 المساعد 〉 -  '..name..'\n'
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = name, url="t.me/"..username}},}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..username..'&caption=' .. URL.escape(Name).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+
+if text == 'مساعد' or text == 'المساعد' then 
+tdcli_function ({ID = "msa3d:ban",user_id_ = SUDO},function(arg,result)  
+local msg_id = msg.id_/2097152/0.5 
+local Text = "᥀︙𝙳𝚅 𝙽𝙰𝙼𝙴 ~"..result.first_name_.."\n᥀︙𝙳𝚅 𝚄𝚂𝙴?? ~[@"..result.username_.."]\n᥀︙𝙳𝚅 𝙸𝙳 ~"..msa3d:ban..""
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = result.first_name_,url="t.me/"..result.username_}}, 
+} 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end,nil)
 end
 
 if text == "مارتن" then
@@ -14102,7 +14094,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ' مــطــور الــبــوت ᥀︙↫', url="http://t.me/"..sudos.UserName},
+{text = ' مـطـور الـبـوت 🔰', url="http://t.me/"..sudos.UserName},
 },
 {
 {text = 'اضـف الـبوت الي مجموعتك ✅  ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
@@ -18405,7 +18397,6 @@ local Teext =[[
 5⃣ »» || ✪ اوامـر المـطوريـن ✪ ||
 
 [❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂](https://t.me/Source_JACK)
-
  ᥀︙ تفعيل ↫ تعطيل 
  ᥀︙ المجموعات ↫ المشتركين ↫ الاحصائيات
  ᥀︙ رفع ↫ تنزيل منشئ اساسي
