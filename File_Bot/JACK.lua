@@ -15,66 +15,6 @@ send(msg.chat_id_, msg.id_," ● تـم تـعـطـيل ردود السورس")
 return false end
 end
 
-if text == 'حصل' then
-local Text = [[
-حصل وطحينه😹😹.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Source_Jankees/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'تخ' then
-local Text = [[
-هنولع فلمكان 🌚💗.😹😹.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Source_Jankees/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'جيت' then
-local Text = [[
-لف ورجع تاني تخ 😹😹.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Source_Jankees/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'هضربك' or text == 'هموتك' then
-local Text = [[
-تضرب مين ياض يعره 😹😹.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/Source_Jankees/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'مح' or text == 'مح💋' then
-local Text = [[
-ونا كمان عايز من ده 🥺🥺
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/Source_Jankees/13&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
 if text == 'عركني' then
 local Text = [[
 ]]
@@ -118,6 +58,66 @@ keyboard.inline_keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/D_V1_D/96&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'جيت' then
+local Text = [[
+عادي م حوار 😹😹
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'تف' then
+local Text = [[
+ع وشك 😹😹
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/69&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'مح' then
+local Text = [[
+ف بؤاك💋🌚🌚
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/75&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'حسن' then
+local Text = [[
+سيبو زفت فحاله 😒😒
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⇣🇨🇦مستنيك بف🌚⇣', url="t.me/w_hassan_w"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/64&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'ماندو' then
+local Text = [[
+𝙳 𝚅 𝙱 𝙸 𝙾↫قال ماندو مافياا :ان لما يعجبك طبعي اطبع عند غيري😹💋
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⇣🇯🇴 ماندو⇣', url="t.me/MANDO_XD"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/75&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'عامل اي' then 
