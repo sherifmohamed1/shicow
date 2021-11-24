@@ -4319,7 +4319,7 @@ end
 
 if text == 'بالي' or text == 'قمر البار' or text == 'بيلي' then
 local Text = [[
-ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+
 [قمر البار.. 🌚❤️](t.me/bali610)
 
 [راحو وهم ف داخل الروح حيين ي الله عسي مثوى امي وابي جناتك💔💔](t.me/bali610)
@@ -8854,7 +8854,7 @@ Reply_Status(msg,id,"reply","• تم تنزيله من المساعد\n√")
 bot_data:del(rob_id.."msa3d:rob")
 bot_data:del(rob_id.."id:msa3d:rob")
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_WESTON, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_JACK, nil)
 return false 
 end
 if text == ("تنزيل مساعد") and SudoBot(msg) then
@@ -8864,7 +8864,7 @@ Reply_Status(msg,id,"reply","• تم تنزيله من المساعد\n√")
 bot_data:del(rob_id.."msa3d:rob")
 bot_data:del(rob_id.."id:msa3d:rob")
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_WESTON, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_JACK, nil)
 return false 
 end
 
@@ -15151,7 +15151,7 @@ local List = {
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ .
+⌔➺: 𝗖?? - ❨@Source_JACK❩ ᥀︙ .
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -16012,7 +16012,7 @@ Msᴀɢ ~ #msgs
 [[
 𝐘??𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
-𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
+𝐒??𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
 𝗖𝗛☤🇪🇬 - ❨@Source_JACK❩ ᥀︙ 
 ]],
