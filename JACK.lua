@@ -2560,7 +2560,6 @@ end
 return false
 end
 
-
 if text and text:match("^رفع مطور @(.*)$") and msa3d(msg) then
 local username = text:match("^رفع مطور @(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
@@ -2568,7 +2567,7 @@ local Source_JACK = bot_data:get(ban_id..'text:ch:user')
 if Source_JACK then
 send(msg.chat_id_, msg.id_,'['..Source_JACK..']')
 else
-send(msg.chat_id_, msg.id_,' ᥀︙  لا تستطيع استخدام البوت \n ᥀︙   يرجى الاشتراك بالقناه اولا \n ᥀︙   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ᥀︙لا تستطيع استخدام البوت \n ᥀︙يرجى الاشتراك بالقناه اولا \n ᥀︙اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8900,7 +8899,7 @@ end
 if text == ("رفع ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and msa3d(msg) then
 function Function_JACK(extra, result, success)
 bot_data:sadd(ban_id.."Dev:ban:2", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","᥀︙  تم ترقيته ثانوي عام في البوت")  
+Reply_Status(msg,result.sender_user_id_,"reply","᥀︙تم ترقية العضو ثانوي")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_JACK, nil)
 return false 
@@ -8914,7 +8913,7 @@ send(msg.chat_id_,msg.id_,"᥀︙  عذرا عزيزي المستخدم هاذا
 return false 
 end      
 bot_data:sadd(ban_id.."Dev:ban:2", result.id_)
-Reply_Status(msg,result.id_,"reply","᥀︙  تم ترقيته ثانوي عام في البوت")  
+Reply_Status(msg,result.id_,"reply","᥀︙تم ترقية العضو ثانوي")  
 else
 send(msg.chat_id_, msg.id_,"᥀︙  لا يوجد حساب بهاذا المعرف")
 end
@@ -8925,13 +8924,13 @@ end
 if text and text:match("^رفع ثانوي (%d+)$") and SudoBot(msg) then
 local userid = text:match("^رفع ثانوي (%d+)$")
 bot_data:sadd(ban_id.."Dev:ban:2", userid)
-Reply_Status(msg,userid,"reply","᥀︙  تم ترقيته ثانوي عام في البوت")  
+Reply_Status(msg,userid,"reply","᥀︙تم ترقية العضو ثانوي")  
 return false 
 end
 if text == ("تنزيل ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_JACK(extra, result, success)
 bot_data:srem(ban_id.."Dev:ban:2", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","᥀︙  تم تنزيله من الثانوي عامين")  
+Reply_Status(msg,result.sender_user_id_,"reply","᥀︙تم تنزيل العضو من الثانوين")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_JACK, nil)
 return false 
@@ -8941,7 +8940,7 @@ local username = text:match("^تنزيل ثانوي @(.*)$")
 function Function_JACK(extra, result, success)
 if result.id_ then
 bot_data:srem(ban_id.."Dev:ban:2", result.id_)
-Reply_Status(msg,result.id_,"reply","᥀︙  تم تنزيله من الثانوي عامين")  
+Reply_Status(msg,result.id_,"reply","᥀︙تم تنزيل العضو من الثانوين")  
 else
 send(msg.chat_id_, msg.id_,"᥀︙  لا يوجد حساب بهاذا المعرف")
 end
@@ -8952,12 +8951,12 @@ end
 if text and text:match("^تنزيل ثانوي (%d+)$") and SudoBot(msg) then
 local userid = text:match("^تنزيل ثانوي (%d+)$")
 bot_data:srem(ban_id.."Dev:ban:2", userid)
-Reply_Status(msg,userid,"reply","᥀︙  تم تنزيله من الثانوي عامين")  
+Reply_Status(msg,userid,"reply","᥀︙تم تنزيل العضو من الثانوين")  
 return false 
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = bot_data:smembers(ban_id.."Dev:ban:2")
-t = "\n ᥀︙   قائمة مطورين الثانويين للبوت \n❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂\n"
+t = "\n ᥀︙ قائمة مطورين الثانويين للبوت \n❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -8973,7 +8972,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("مسح الثانوين") and SudoBot(msg) then
 bot_data:del(ban_id.."Dev:ban:2")
-send(msg.chat_id_, msg.id_, "\n ᥀︙  تم مسح قائمة المطورين الثانوين  ")
+send(msg.chat_id_, msg.id_, "\n ᥀︙تم مسح قائمة المطورين الثانوين  ")
 end
 ------------------------------------------------------------------------
 if text == ("رفع مدير عام") and msg.reply_to_message_id_ and Constructor(msg) then
@@ -14990,7 +14989,7 @@ local List = {
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪??.
-¦• ??𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
+¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
 ¦• 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ .
@@ -18579,7 +18578,20 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 
+if text == 'تاك' or text == 'تاك للكل' or text == 'تاك المالك' then
+local Text = [[
 
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text ='تاك للكل',callback_data=msg.sender_user_id_.."S00F4:all:Time"..result.sender_user_id_}},
+{{text ='الاعضاء',callback_data=msg.sender_user_id_.."Cick:all"..result.sender_user_id_}},
+{{text ='الكل',callback_data=msg.sender_user_id_.."GetChannelFull"..result.sender_user_id_}},
+{{text ='للكل',callback_data=msg.sender_user_id_.."GetChannelMembers"..result.sender_user_id_}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/U_AFLAM/114&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 
 if Text == '/help2' then
 if not Mod(data) then
@@ -19803,21 +19815,6 @@ keyboard.inline_keyboard = {
 {{text = 'مريم', callback_data="/help36"},{text = 'عقاب', callback_data="/help42"}},
 {{text = 'القائمه الرائسيه', callback_data="/add"}},
 {{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-
-if Text == '/rtdash' then
-local Teext =[[ 
-᥀︙يمكنك التحكم عن طريق الازرار  بالاسفل  ..↑↓
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text =' مساعد',callback_data=msg.sender_user_id_.."msa3d:ban"..result.sender_user_id_}},
-{{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_}},
-{{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_}},
-{{text ='᥀︙𝗦𝗢𝗨𝗥𝗖𝗘 𝗝𝗔𝗖𝗞︙᥀', url="t.me/Source_JACK"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
