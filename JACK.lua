@@ -4339,18 +4339,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Source_JACK/497&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'بالي' then
-local Text = [[
-[قمر البار.. 🌚❤️](t.me/bali610)
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '⇣❤️🌚بالي القمر⇣', url="t.me/bali610"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/91&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
 if text == 'تايجر' or text == 'تيجو' or text == 'TIGER' then
 local Text = [[
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
@@ -8877,6 +8865,31 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {
 {text = ' ° '..result.first_name_..' ° ',url="t.me/marten_vs_worled"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+else
+sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+ end end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = 2060947106, offset_ = 0, limit_ = 1 }, taha, nil)
+end,nil)
+end
+end
+
+if text == "بالي" then
+local TEXT_SUD = bot_data:get(ban_id..'DRAGON:TEXT_SUDO')
+if TEXT_SUDO then 
+send(msg.chat_id_, msg.id_,TEXT_SUDO)
+else
+tdcli_function ({ID = "GetUser",user_id_ = 2060947106,},function(arg,result) 
+local function taha(extra, taha, success)
+if taha.photos_[0] then
+local Name = ' ['..result.first_name_..'](t.me/bali610)\n'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = ' ° '..result.first_name_..' ° ',url="t.me/bali610"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -15988,7 +16001,7 @@ Msᴀɢ ~ #msgs
 ♡ : 𝑈𝑆??𝑅 𖠀 #username .
 ♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
 ♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
-♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
+♡ : 𝐸𝐷𝐼??  𖠀 #edit .
 ♡ : 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ 
 ]],
 [[
