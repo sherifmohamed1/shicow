@@ -8847,25 +8847,41 @@ bot_data:set(ban_id.."id:msa3d:ban", userid)
 Reply_Status(msg,userid,"reply","᥀︙  تم ترقيته مساعد في البوت")  
 return false 
 end
-if text == ("تنزيل مساعد") and SudoBot(msg) then
-function Function_WESTON(extra, result, success)
-local id = bot_data:get(rob_id.."id:msa3d:rob")
-Reply_Status(msg,id,"reply","• تم تنزيله من المساعد\n√")  
-bot_data:del(rob_id.."msa3d:rob")
-bot_data:del(rob_id.."id:msa3d:rob")
+if text == ("تنزيل المساعد") and SudoBot(msg) then
+function Function_JACK(extra, result, success)
+local id = bot_data:get(ban_id.."id:msa3d:ban")
+Reply_Status(msg,id,"reply","◉  تم تنزيله من المساعد")  
+bot_data:del(ban_id.."msa3d:ban")
+bot_data:del(ban_id.."id:msa3d:ban")
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_JACK, nil)
 return false 
 end
 if text == ("تنزيل مساعد") and SudoBot(msg) then
-function Function_WESTON(extra, result, success)
-local id = bot_data:get(rob_id.."id:msa3d:rob")
-Reply_Status(msg,id,"reply","• تم تنزيله من المساعد\n√")  
-bot_data:del(rob_id.."msa3d:rob")
-bot_data:del(rob_id.."id:msa3d:rob")
+function Function_JACK(extra, result, success)
+local id = bot_data:get(ban_id.."id:msa3d:ban")
+Reply_Status(msg,id,"reply","◉  تم تنزيله من المساعد")  
+bot_data:del(ban_id.."msa3d:ban")
+bot_data:del(ban_id.."id:msa3d:ban")
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_JACK, nil)
 return false 
+end
+if text == "المساعد" or text == "مساعد" then
+local id = bot_data:get(ban_id.."id:msa3d:ban")
+local urrl = https.request('https://api.telegram.org/bot'..token..'/getchat?chat_id='..id)
+local json = JSON.decode(urrl)
+local name = json.result.first_name
+if json.result.username then
+username = json.result.username
+else
+username = 'SOURCEVENOM'
+end
+local Name = '〈 المساعد 〉 -  '..name..'\n'
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = name, url="t.me/"..username}},}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..username..'&caption=' .. URL.escape(Name).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "مارتن" then
@@ -15151,7 +15167,7 @@ local List = {
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖?? - ❨@Source_JACK❩ ᥀︙ .
+⌔➺: 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ .
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -16012,7 +16028,7 @@ Msᴀɢ ~ #msgs
 [[
 𝐘??𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
-𝐒??𝐚𝐬𝐓 ☤🇪🇬- #stast 
+𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
 𝗖𝗛☤🇪🇬 - ❨@Source_JACK❩ ᥀︙ 
 ]],
