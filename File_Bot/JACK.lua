@@ -20,7 +20,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/D_V1_D/94&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -31,7 +31,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/D_V1_D/93&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -42,7 +42,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/D_V1_D/95&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -54,7 +54,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -66,7 +66,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/84&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -78,7 +78,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -90,7 +90,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -102,7 +102,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -114,7 +114,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -126,7 +126,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -138,7 +138,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/69&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -150,7 +150,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/75&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -184,7 +184,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/88&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -196,7 +196,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/88&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -208,7 +208,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/30&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -220,7 +220,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/26&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -232,7 +232,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/26&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -244,7 +244,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/31&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -256,7 +256,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/31&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -268,7 +268,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/90&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -280,7 +280,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/58&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -292,7 +292,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/58&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -304,7 +304,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/59&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -316,7 +316,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/80&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -328,7 +328,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/80&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -340,7 +340,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/85&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -352,7 +352,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/83&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -364,7 +364,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣  𝐽𝐴𝐶𝐾 ⇣', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/SH_TI_N/30&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
