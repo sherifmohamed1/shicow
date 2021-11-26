@@ -1243,33 +1243,6 @@ end
 end
 end
 if text then 
-list = {'شيكو'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-local my_ph = bot_data:get(ban_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ اي يقلب شيكو..🌚💘](t.me/S_H_Y_C_O)')
-return false
-end
-end
-end
-if text then 
-list = {'شريف'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-local my_ph = bot_data:get(ban_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ اي يقلب شريف..🌚💘](t.me/S_H_Y_C_O)')
-return false
-end
-end
-end
 
 end
 return {
