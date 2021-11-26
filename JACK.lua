@@ -3199,7 +3199,7 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(msa3d,"• هناك من بحاجه الى مساعده  يا سيدي المساعد\n• الشخص  {"..Name.."}\n• اسم الجروب {"..NameChat.."}\n• ايدي الجروب {`"..msg.chat_id_.."`}\n• رابط الجروب \n ["..LinkGroup.."] ",0,'md')
+sendText(msa3d:ban,"• هناك من بحاجه الى مساعده  يا سيدي المساعد\n• الشخص  {"..Name.."}\n• اسم الجروب {"..NameChat.."}\n• ايدي الجروب {`"..msg.chat_id_.."`}\n• رابط الجروب \n ["..LinkGroup.."] ",0,'md')
 end,nil)
 end,nil)
 end
