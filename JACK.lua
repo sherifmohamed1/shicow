@@ -14658,7 +14658,7 @@ local adagroup = bot_data:scard(ban_id..'data.member_count_')
 local abbabmn = bot_data:scard(ban_id..'data.administrator_count_')  
 local addrsyl = bot_data:scard(ban_id..'2097152')  
 local addmtrodin = bot_data:scard(ban_id..'data.kicked_count_')  
-local shyco1 = "✭ اسم الجروب ↫"..ta.title_..'\n✭ عدد الجروب ↫{'..data.member_count_..'}\n✭ عدد الادمنيه ↫{'..data.administrator_count_..'}\n✭ عدد الرسائل ↫{'..2097152..'}\n✭ عدد المطرودين ↫{'..data.kicked_count_..'}'
+local shyco1 = "✭ اسم الجروب ↫"..ta.title_..'\n✭ عدد الجروب ↫{'..data.member_count_..'}\n✭ عدد الادمنيه ↫{'..data.administrator_count_..'}\n✭ عد(..msg.id_/2097152/0.5..){'..2097152..'}\n✭ عدد المطرودين ↫{'..data.kicked_count_..'}'
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15186,7 +15186,7 @@ local List = {
  ࿕ ¦• 𝗖𝗛 - ❨@Source_JACK❩ ✭ .
 ]],
 [[
-► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
+► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username ??  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
