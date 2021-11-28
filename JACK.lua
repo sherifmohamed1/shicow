@@ -14652,6 +14652,30 @@ end
 return false  
 end
 end
+if text == 'معلومات الجروب' and Mod(msg) then 
+local namgroup = bot_data:scard(ban_id..'ta.title_')  
+local adagroup = bot_data:scard(ban_id..'data.member_count_')  
+local abbabmn = bot_data:scard(ban_id..'data.administrator_count_')  
+local addrsyl = bot_data:scard(ban_id..'2097152')  
+local addmtrodin = bot_data:scard(ban_id..'data.kicked_count_')  
+local shyco1 = "✭ اسم الجروب ↫"..ta.title_..'\n✭ عدد الجروب ↫{'..data.member_count_..'}\n✭ عدد الادمنيه ↫{'..data.administrator_count_..'}\n✭ عدد الرسائل ↫{'..2097152..'}\n✭ عدد المطرودين ↫{'..data.kicked_count_..'}'
+local msg_id = msg.id_/2097152/0.5  
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = textt, url="http://t.me/"..username},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end
+
 
 if text == 'الاحصائيات' and msa3d(msg) then 
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'جاك') 
