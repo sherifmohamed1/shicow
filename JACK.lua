@@ -2259,6 +2259,38 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
+if text == 'التواصل'  then
+local Text = [[ 
+[✭ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙿](t.me/JANK3S)
+
+[✭ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙲𝙷𝙰𝙽𝙴𝙻](t.me/Source_JACK)
+
+[❂••••••••••☾𝙹𝙰𝙲𝙺☽••••••••••❂](t.me/SourceJACK)
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '✭ 𝑇𝐴𝑊𝑂𝑆𝐿',url="t.me/J_A_CK_BOT"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'بار السورس'  then
+local Text = [[ 
+[✭ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙿](t.me/JANK3S)
+
+[✭ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙲𝙷𝙰𝙽𝙴𝙻](t.me/Source_JACK)
+
+[❂••••••••••☾𝙹𝙰𝙲𝙺☽••••••••••❂](t.me/SourceJACK)
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '✭ 𝙶𝚁𝙾𝚄𝙿',url="t.me/JANK3S"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
 if text == 'معلومات الكيبورد' and Devban(msg) then
 bot_data:del(ban_id..'Srt:Bot') 
 local Text = [[ 
@@ -4438,6 +4470,65 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
+if text == 'مميزات' or text == 'المميزات' or text == 'مميزات بالصور' then
+local Text = [[
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '❂••••••••••☾𝙹𝙰𝙲𝙺☽••••••••••❂', url="t.me/JANK3S"}},
+{{text = 'استوري', callback_data="/lklpo"},{text = 'كتبات', callback_data="/lp8qy"}}, 
+{{text = 'تويت', callback_data="/ljljkj"},{text = 'لو خيروك', callback_data="/asr4"}}, 
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/U_AFLAM/114&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'مين منصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
+local Text = [[
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ [🌏◍ ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ᴊᴀᴄᴋ ◍⇉](t.me/Source_JACK)
+ ––––––––––––––––
+[⇊ يوزرات مبرمجين السورس 🍂](t.me/xx_Source_JACK)
+  ––––––––––––––––
+[ تنصب بوت حمايه علي سورس جاك تواصل معانا✅](t.me/xx_shicoo_xx_bot)
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✈ • شيكو • ✈', url="t.me/S_H_Y_C_O"},{text = '✈ • تايجر • ✈', url="t.me/Oo_tiger"}},
+{{text = '✈ • تواصل السورس • ✈', url="t.me/xx_shicoo_xx_bot"}}, 
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == "عايز سورس" then
+if not DevSoFi(msg) then
+local Text = [[
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ [🌏◍ ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ᴊᴀᴄᴋ ◍⇉](t.me/Source_JACK)
+ ––––––––––––––––
+[¤ سعر عمل السورس • 🌝](t.me/JANK3S)
+ ––––––––––––––––
+[¤ سورس بكامل  (150) فقط • 💸](t.me/xx_shicoo_xx_bot)
+ ––––––––––––––––
+[¤ لشراء السورس الخاص بك • ★](t.me/Oo_tiger)
+ ––––––––––––––––
+[¤ أضغط علي الزر بالأسفل للتواصل • 👇](t.me/S_H_Y_C_O)
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✈ • شيكو • ✈', url="t.me/S_H_Y_C_O"},{text = '✈ • تايجر • ✈', url="t.me/Oo_tiger"}},
+{{text = '✈ • تواصل السورس • ✈', url="t.me/xx_shicoo_xx_bot"}}, 
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+end
+
 if text == 'بالي' or text == 'قمر البار' or text == 'بيلي' then
 local Text = [[
 
@@ -4463,6 +4554,37 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '✭ تـواصـل شـیـگـو',url="t.me/SHYCO_BOT"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SH_TI_N/94&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'اغاني' or text == 'الاغاني' or text == 'اغنيه' then
+local Text = [[
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'قم بالاختيار نوع الاغنيه . .🎀🥺', url="t.me/SOERSE_WESTON"}},
+{{text = '「عمار حسني」', callback_data="/hssan"}},
+{{text = '「حيات الروح」', callback_data="/hssan2"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/SOERSE_WESTON"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/U_AFLAM/114&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'بار شيكو' or text == 'بار تايجر' or text == 'بار السورس' then
+local Text = [[
+[✭ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙿](t.me/JANK3S)
+
+[✭ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙲𝙷𝙰𝙽𝙴𝙻](t.me/Source_JACK)
+
+[❂••••••••••☾𝙹𝙰𝙲𝙺☽••••••••••❂](t.me/SourceJACK)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✭ 𝙶𝚁𝙾𝚄𝙿',url="t.me/JANK3S"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SH_TI_N/94&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6441,11 +6563,23 @@ local photps = (ban.total_count_ or 0)
 local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local bana = {
-	
-"⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★",
+"يتي القمر نزل الارض يعمل اي🥺︙✭",
 
-"✭↫𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑| 🖤◍",
+"اي يعم القمر دا ملاك يجدعان...🥺💕︙✭",
 
+"اي الصوره المفنه دي يعم....😜︙✭",
+
+"هوا الي مجننا هوا هوا القمر هوا....😂︙✭",
+
+"صورتك دي ولا صورت القمر.....💌︙✭",
+
+"  قمر ياروحي خد ممح..💋❤️︙✭",
+
+"  صورتك عفنت غيرها بقي..😺💛︙✭",
+
+"  قلبي موجود فصوره .. 🥺❤️︙✭",
+
+"  الله ع جمالك ياقمري..🥺💛︙✭",
 }
 local rdphoto = bana[math.random(#bana)]
 if not bot_data:get(ban_id..'Bot:Id:Photo'..msg.chat_id_) then      
@@ -15614,7 +15748,7 @@ Msᴀɢ ~ #msgs
 𖤂 ~ 𝑚??𝑔 #msgs 𖤐
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
-𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
+𖤂 ~ 𝑒𝑑??𝑡 #edit 𖤐
 𖤂 ~ 𝗖𝗛 - ❨@Source_JACK❩ ✭ 
 ]],
 [[
@@ -18579,46 +18713,6 @@ keyboard.inline_keyboard = {
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Vs)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
-end
-if Text and Text:match("^(%d+)Devban(.*)$") then
-local notId  = Text:match("(%d+)")  
-local userid = Text:gsub('Devban',''):gsub(notId,'')
-if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
-local notText ='✭ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-bot_data:sadd(ban_id.."Dev:ban:2", userid)
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
-}
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*•  تم تنفيذ الامر بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
-return false
-end
-if Text and Text:match("^(%d+)baconor(.*)$") then
-local notId  = Text:match("(%d+)")  
-local userid = Text:gsub('baconor',''):gsub(notId,'')
-if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
-local notText ='✭ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-bot_data:sadd(ban_id.."baconor", userid)
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
-}
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*• تم رفعه مطور ثانوي مجموعه*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
-return false
-end
-if Text == 'oklajyo'..data.sender_user_id_ then  
-send(msg.chat_id_, msg.id_,' '..msg.sender_user_id_)
-end
-if Text == 'bowtie'..data.sender_user_id_ then  
-if not Bot(msg) then 
-send(msg.chat_id_, msg.id_,getbio(msg.sender_user_id_)) 
-end
 end 
 
 if Text and Text:match("^(%d+)msa3d:ban(.*)$") then
@@ -18657,47 +18751,6 @@ https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='
 return false
 end
 
-
-
-
-
-if Text and Text:match("^(%d+)msa3d:ban(.*)$") then
-local notId  = Text:match("(%d+)")  
-local userid = Text:gsub('msa3d:ban',''):gsub(notId,'')
-if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
-local notText ='◍︙عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-bot_data:del(ban_id.."msa3d:ban")
-bot_data:del(ban_id.."msa3d:ban", userid)
-bot_data:set(ban_id.."id:msa3d:ban", userid)
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
-}
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته مساعد *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
-return false
-end
-
-if Text and Text:match("^(%d+)Devban(.*)$") then
-local notId  = Text:match("(%d+)")  
-local userid = Text:gsub('Devban',''):gsub(notId,'')
-if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
-local notText ='◍︙عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-bot_data:del(ban_id.."Dev:ban:2", userid)
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
-}
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته ثانوي *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
-return false
-end
-
-
 if Text and Text:match("^(%d+)Sudo:Rd(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('Sudo:Rd',''):gsub(notId,'')
@@ -18706,12 +18759,12 @@ local notText ='◍︙عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-bot_data:del(ban_id.."Sudo:User", userid)
+bot_data:sadd(ban_id.."Sudo:Rd", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته مطور *")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته مطور*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
 return false
 end
 
@@ -20788,7 +20841,7 @@ bot_data:del(ban_id..'edits'..msg.chat_id_..msg.sender_user_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '✅ 𝚂𝙾𝚄𝚁??𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"},
+{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
