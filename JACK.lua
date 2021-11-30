@@ -10500,7 +10500,7 @@ function start_function(extra, result, success)
 local keyboard = {
 {{text =' مساعد',callback_data=msg.sender_user_id_.."msa3d:ban"..result.sender_user_id_}},
 {{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_},{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_}},
-{{text ='مالك',callback_data=msg.sender_user_id_.."CoSu:Rd"..result.sender_user_id_}},
+{{text ='مالك',callback_data=msg.sender_user_id_.."CoSu"..result.sender_user_id_}},
 {{text ='منشئ اساسي',callback_data=msg.sender_user_id_.."BasicConstructor:Rd"..result.sender_user_id_},{text ='منشئ',callback_data=msg.sender_user_id_.."Constructor:Rd"..result.sender_user_id_}},
 {{text ='مدير',callback_data=msg.sender_user_id_.."Manager:Rd"..result.sender_user_id_}},
 {{text ='ادمن',callback_data=msg.sender_user_id_.."Mod:Rd"..result.sender_user_id_},{text ='مميز',callback_data=msg.sender_user_id_.."Special:Rd"..result.sender_user_id_}},
@@ -17131,7 +17131,7 @@ end
 bot_data:sadd(ban_id.."Sudo:User", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✅ 𝚂𝙾𝚄??𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته مطور*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
 return false
