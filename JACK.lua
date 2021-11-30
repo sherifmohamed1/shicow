@@ -17120,7 +17120,7 @@ https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='
 return false
 end
 
-if Text and Text:match("^(%d+)Sudo:User(.*)$") then
+if Text and Text:match("^(%d+)Sudo:Rd(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('Sudo:Rd',''):gsub(notId,'')
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
@@ -17128,7 +17128,7 @@ local notText ='◍︙عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-bot_data:sadd(ban_id.."Sudo:Rd", userid)
+bot_data:sadd(ban_id.."Sudo:User", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '✅ 𝚂𝙾𝚄??𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
@@ -17145,7 +17145,7 @@ local notText ='◍︙عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-bot_data:sadd(ban_id.."CoSu:Rd", userid)
+bot_data:sadd(ban_id.."CoSu", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
