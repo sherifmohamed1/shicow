@@ -17120,7 +17120,7 @@ https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='
 return false
 end
 
-if Text and Text:match("^(%d+)Sudo:Rd(.*)$") then
+if Text and Text:match("^(%d+)Sudo:User(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('Sudo:Rd',''):gsub(notId,'')
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
@@ -17131,13 +17131,13 @@ end
 bot_data:sadd(ban_id.."Sudo:Rd", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✅ 𝚂𝙾𝚄𝚁??𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄??𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته مطور*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
 return false
 end
 
-if Text and Text:match("^(%d+)CoSu:Rd(.*)$") then
+if Text and Text:match("^(%d+)CoSu(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('CoSu:Rd',''):gsub(notId,'')
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
@@ -17154,7 +17154,7 @@ https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='
 return false
 end
 
-if Text and Text:match("^(%d+)BasicConstructor:Rd(.*)$") then
+if Text and Text:match("^(%d+)Basic:Constructor(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('BasicConstructor:Rd',''):gsub(notId,'')
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
@@ -17171,7 +17171,7 @@ https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='
 return false
 end
 
-if Text and Text:match("^(%d+)Constructor:Rd(.*)$") then
+if Text and Text:match("^(%d+)Constructor(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('Constructor:Rd',''):gsub(notId,'')
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
@@ -17205,7 +17205,7 @@ https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='
 return false
 end
 
-if Text and Text:match("^(%d+)Mod:Rd(.*)$") then
+if Text and Text:match("^(%d+)Mod:User(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('Mod:Rd',''):gsub(notId,'')
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
@@ -17222,7 +17222,7 @@ https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='
 return false
 end
 
-if Text and Text:match("^(%d+)Special:Rd(.*)$") then
+if Text and Text:match("^(%d+)Special:User(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('Special:Rd',''):gsub(notId,'')
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
