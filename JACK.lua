@@ -21,18 +21,18 @@ end
 file:write(serialized)    
 file:close()  
 end  
-if not bot_data:get(id_server..":token") then
+if not bot_data:get(id_server..":botUserName") then
 io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\n◍- - - - - - - -×- - - - - - - -◍\n\27')
 local token = io.read()
 if token ~= '' then
-local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
+local url , res = https.request('https://api.telegram.org/bot'..botUserName..'/getMe')
 if res ~= 200 then
 print('\27[0;31m◍- - - - - - - -×- - - - - - - -◍\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
 io.write('\27[0;31m تم حفظ التوكن بنجاح \n◍- - - - - - - -×- - - - - - - -◍\n27[0;39;49m')
 local json = JSON.decode(url)
-bot_data:set(id_server..":token_username",json.result.username)
-bot_data:set(id_server..":token",token)
+bot_data:set(id_server..":botUserName",json.result.username)
+bot_data:set(id_server..":botUserName",botUserName)
 end 
 else
 print('\27[0;35m◍- - - - - - - -×- - - - - - - -◍\n لم يتم حفظ التوكن ارسل لي التوكن الان')
@@ -62,15 +62,15 @@ end
 local create_config_auto = function()
 config = {
 botUserName = bot_data:get(id_server..":token_username"),
-token = bot_data:get(id_server..":token"),
+token = bot_data:get(id_server..":botUserName"),
 SUDO = bot_data:get(id_server..":SUDO:ID"),
 UserName = bot_data:get(id_server..":SUDO:USERNAME"),
  }
 create(config, "./Info.lua")   
 end 
 create_config_auto()
-botUserName = bot_data:get(id_server..":token_username")
-token = bot_data:get(id_server..":token")
+botUserName = bot_data:get(id_server..":botUserName")
+token = bot_data:get(id_server..":botUserName")
 SUDO = bot_data:get(id_server..":SUDO:ID")
 UserName = bot_data:get(id_server..":SUDO:USERNAME")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
@@ -89,7 +89,7 @@ echo "TG IS NOT FIND IN FILES BOT"
 echo "◍- - - - - - - -×- - - - - - - -◍◍- - - - - - - -×- - - - - - - -◍"
 exit 1
 fi
-if [ ! $token ]; then
+if [ ! $botUserName ]; then
 echo "◍- - - - - - - -×- - - - - - - -◍◍- - - - - - - -×- - - - - - - -◍"
 echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE Info.lua \e[0m"
 echo "◍- - - - - - - -×- - - - - - - -◍◍- - - - - - - -×- - - - - - - -◍"
@@ -133,7 +133,7 @@ if not f then
 AutoSet()  
 else   
 f:close()  
-bot_data:del(id_server..":token")
+bot_data:del(id_server..":botUserName")
 bot_data:del(id_server..":SUDO:ID")
 end  
 local config = loadfile("./Info.lua")() 
@@ -224,7 +224,7 @@ return JACK
 end 
 function Devban(msg) 
 local hash = bot_data:sismember(ban_id.."Dev:ban:2", msg.sender_user_id_) 
-if hash or SudoBot(msg) or msa3d(msg) then  
+if hash or SudoBot(msg) then  
 return true  
 else  
 return false  
@@ -255,7 +255,7 @@ return idbot
 end
 function Sudo(msg) 
 local hash = bot_data:sismember(ban_id..'Sudo:User', msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Bot(msg) or msa3d(msg) then  
+if hash or SudoBot(msg) or Devban(msg) or Bot(msg)  then  
 return true  
 else  
 return false  
@@ -279,7 +279,7 @@ end
 end
 function CoSu(msg)
 local hash = bot_data:sismember(ban_id..'CoSu'..msg.chat_id_, msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or Bot(msg) or msa3d(msg) then   
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or Bot(msg)  then   
 return true 
 else 
 return false 
@@ -287,7 +287,7 @@ end
 end
 function BasicConstructor(msg)
 local hash = bot_data:sismember(ban_id..'Basic:Constructor'..msg.chat_id_, msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then   
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or CoSu(msg) or Bot(msg)  then   
 return true 
 else 
 return false 
@@ -295,7 +295,7 @@ end
 end
 function Constructor(msg)
 local hash = bot_data:sismember(ban_id..'Constructor'..msg.chat_id_, msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg)  then       
 return true    
 else    
 return false    
@@ -303,7 +303,7 @@ end
 end
 function Manager(msg)
 local hash = bot_data:sismember(ban_id..'Manager'..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or CoSu(msg) or Bot(msg)  then       
 return true    
 else    
 return false    
@@ -311,15 +311,15 @@ end
 end
 function onall(msg)
 local hash = bot_data:sismember(ban_id..'onall'..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or CoSu(msg) or Bot(msg)  then       
 return true    
 else    
 return false    
 end 
 end
 function cleaner(msg)
-local hash = bot_data:sismember(ban_id.."NASA:MN:TF"..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg) or msa3d(msg)  then       
+local hash = bot_data:sismember(ban_id.."shyco:MN:TF"..msg.chat_id_,msg.sender_user_id_)    
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg)  then       
 return true    
 else    
 return false    
@@ -327,7 +327,7 @@ end
 end
 function Mod(msg)
 local hash = bot_data:sismember(ban_id..'Mod:User'..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or CoSu(msg) or Bot(msg)  then       
 return true    
 else    
 return false    
@@ -335,7 +335,7 @@ end
 end
 function Special(msg)
 local hash = bot_data:sismember(ban_id..'Special:User'..msg.chat_id_,msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Mod(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Mod(msg) or CoSu(msg) or Bot(msg)  then       
 return true 
 else 
 return false 
@@ -15616,7 +15616,7 @@ Msᴀɢ ~ #msgs
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
 ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast ??🇬 ꙰
-ᯓ 𝗜𝗗 . #id 🇪?? ꙰
+ᯓ ??𝗗 . #id 🇪?? ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪?? ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
 ᯓ 𝗖𝗛 - ❨@Source_JACK❩ ✭ .
@@ -18322,7 +18322,7 @@ end
 
 if Text == '/mertn' then
 local Teext =[[
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
+❂••••••••••☾𝐽??𝐶𝐾 ☽••••••••••❂
 ✭ اهلا بك في قائمه اسعار قنوات تليجرام
 ✭ اليك قائمه الاسعار في الاسفل ..↑↓
 ✭ قناه 1k ب (120) ج
