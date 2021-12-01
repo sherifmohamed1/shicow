@@ -10495,10 +10495,10 @@ function start_function(extra, result, success)
 local keyboard = {
 {{text =' مساعد',callback_data=msg.sender_user_id_.."msa3d:ban"..result.sender_user_id_}},
 {{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_},{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_}},
-{{text ='مالك',callback_data=msg.sender_user_id_.."CoSu:Rd"..result.sender_user_id_}},
-{{text ='منشئ اساسي',callback_data=msg.sender_user_id_.."BasicConstructor:Rd"..result.sender_user_id_},{text ='منشئ',callback_data=msg.sender_user_id_.."Constructor:Rd"..result.sender_user_id_}},
-{{text ='مدير',callback_data=msg.sender_user_id_.."Manager:Rd"..result.sender_user_id_}},
-{{text ='ادمن',callback_data=msg.sender_user_id_.."Mod:Rd"..result.sender_user_id_},{text ='مميز',callback_data=msg.sender_user_id_.."Special:Rd"..result.sender_user_id_}},
+{{text ='مالك',callback_data=msg.sender_user_id_.."CoSu"..result.sender_user_id_}},
+{{text ='منشئ اساسي',callback_data=msg.sender_user_id_.."BasicConstructor"..result.sender_user_id_},{text ='منشئ',callback_data=msg.sender_user_id_.."Constructor"..result.sender_user_id_}},
+{{text ='مدير',callback_data=msg.sender_user_id_.."Manager"..result.sender_user_id_}},
+{{text ='ادمن',callback_data=msg.sender_user_id_.."Mod"..result.sender_user_id_},{text ='مميز',callback_data=msg.sender_user_id_.."Special"..result.sender_user_id_}},
 {{text ='✅ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐽𝐴𝐶𝐾', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -10506,26 +10506,6 @@ send_inline_key(msg.chat_id_,"*✭ مـرحـبا بـك فـي قـائـمـه
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
-end
-
-if text == 'رفع' and SudoBot(msg) then
-local Text = [[ 
-[✭ مـرحـبا بـك فـي قـائـمـه الـتـحـكـم فـي الـعـضـو فـقـط اضـغـط عـلـي الامـر ..⇊](t.me/JANK3S)
-
-[❂••••••••••☾𝙹𝙰𝙲𝙺☽••••••••••❂](t.me/SourceJACK)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text =' مساعد',callback_data=msg.sender_user_id_.."msa3d:ban"..result.sender_user_id_}},
-{{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_},{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_}},
-{{text ='مالك',callback_data=msg.sender_user_id_.."CoSu:Rd"..result.sender_user_id_}},
-{{text ='منشئ اساسي',callback_data=msg.sender_user_id_.."BasicConstructor:Rd"..result.sender_user_id_},{text ='منشئ',callback_data=msg.sender_user_id_.."Constructor:Rd"..result.sender_user_id_}},
-{{text ='مدير',callback_data=msg.sender_user_id_.."Manager:Rd"..result.sender_user_id_}},
-{{text ='ادمن',callback_data=msg.sender_user_id_.."Mod:Rd"..result.sender_user_id_},{text ='مميز',callback_data=msg.sender_user_id_.."Special:Rd"..result.sender_user_id_}},
-{{text ='✅ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐽𝐴𝐶𝐾', url="t.me/Source_JACK"}},
-} 
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == ("رفع") and msa3d(msg) then
@@ -16078,7 +16058,7 @@ Msᴀɢ ~ #msgs
 ‌‎⿻┊UsEr 𖠄 #username ٫
 ‌‎⿻┊MsGs 𖠄 #msgs ٫
 ‌‎⿻┊StAtS 𖠄 #stast ٫
-‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
+‌‎⿻┊‌‎EdiT ?? #edit ٫
 ‌‎⿻┊‌‎𝗖𝗛 - ❨@Source_JACK❩ ✭ 
 ]],
 [[
