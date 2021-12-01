@@ -222,9 +222,21 @@ end
 end  
 return JACK  
 end 
+if Text and Text:match('(.*)/msa3d:ban') then
+if tonumber(Text:match('(.*)/msa3d:ban')) == tonumber(userid) then
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,userid) 
+bot_data:del(ban_id.."msa3d:ban")
+bot_data:sadd(ban_id.."msa3d:ban", userid)
+bot_data:set(ban_id.."id:msa3d:ban", userid)
+local text = '\n● تم ترقيته مساعد في البوت\n'
+send(data.chat_id_, data.message_id_,text)
+end,nil)
+end
+end
+
 function Devban(msg) 
 local hash = bot_data:sismember(ban_id.."Dev:ban:2", msg.sender_user_id_) 
-if hash or SudoBot(msg) then  
+if hash or SudoBot(msg) or msa3d(msg) then  
 return true  
 else  
 return false  
@@ -255,13 +267,12 @@ return idbot
 end
 function Sudo(msg) 
 local hash = bot_data:sismember(ban_id..'Sudo:User', msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Bot(msg)  then  
+if hash or SudoBot(msg) or Devban(msg) or Bot(msg) or msa3d(msg) then  
 return true  
 else  
 return false  
 end  
 end
-
 function moall(msg) 
 local hash = bot_data:sismember(ban_id..'Sudo:User', msg.sender_user_id_) 
 if hash or SudoBot(msg) or Devban(msg) or Bot(msg)  then  
@@ -280,7 +291,7 @@ end
 end
 function CoSu(msg)
 local hash = bot_data:sismember(ban_id..'CoSu'..msg.chat_id_, msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or Bot(msg)  then   
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or Bot(msg) or msa3d(msg) then   
 return true 
 else 
 return false 
@@ -288,7 +299,7 @@ end
 end
 function BasicConstructor(msg)
 local hash = bot_data:sismember(ban_id..'Basic:Constructor'..msg.chat_id_, msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or CoSu(msg) or Bot(msg)  then   
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then   
 return true 
 else 
 return false 
@@ -296,7 +307,7 @@ end
 end
 function Constructor(msg)
 local hash = bot_data:sismember(ban_id..'Constructor'..msg.chat_id_, msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
 return true    
 else    
 return false    
@@ -304,7 +315,7 @@ end
 end
 function Manager(msg)
 local hash = bot_data:sismember(ban_id..'Manager'..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or CoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
 return true    
 else    
 return false    
@@ -312,15 +323,15 @@ end
 end
 function onall(msg)
 local hash = bot_data:sismember(ban_id..'onall'..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or CoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
 return true    
 else    
 return false    
 end 
 end
 function cleaner(msg)
-local hash = bot_data:sismember(ban_id.."shyco:MN:TF"..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg)  then       
+local hash = bot_data:sismember(ban_id.."NASA:MN:TF"..msg.chat_id_,msg.sender_user_id_)    
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg) or msa3d(msg)  then       
 return true    
 else    
 return false    
@@ -328,7 +339,7 @@ end
 end
 function Mod(msg)
 local hash = bot_data:sismember(ban_id..'Mod:User'..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or CoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
 return true    
 else    
 return false    
@@ -336,13 +347,12 @@ end
 end
 function Special(msg)
 local hash = bot_data:sismember(ban_id..'Special:User'..msg.chat_id_,msg.sender_user_id_) 
-if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Mod(msg) or CoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Mod(msg) or CoSu(msg) or Bot(msg) or msa3d(msg) then       
 return true 
 else 
 return false 
 end 
 end
-
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(2140084638) then  
 var = true 
@@ -10500,7 +10510,7 @@ function start_function(extra, result, success)
 local keyboard = {
 {{text =' مساعد',callback_data=msg.sender_user_id_.."msa3d:ban"..result.sender_user_id_}},
 {{text =' ثانوي ',callback_data=msg.sender_user_id_.."Devban"..result.sender_user_id_},{text =' مطور',callback_data=msg.sender_user_id_.."Sudo:Rd"..result.sender_user_id_}},
-{{text ='مالك',callback_data=msg.sender_user_id_.."CoSu"..result.sender_user_id_}},
+{{text ='مالك',callback_data=msg.sender_user_id_.."CoSu:Rd"..result.sender_user_id_}},
 {{text ='منشئ اساسي',callback_data=msg.sender_user_id_.."BasicConstructor:Rd"..result.sender_user_id_},{text ='منشئ',callback_data=msg.sender_user_id_.."Constructor:Rd"..result.sender_user_id_}},
 {{text ='مدير',callback_data=msg.sender_user_id_.."Manager:Rd"..result.sender_user_id_}},
 {{text ='ادمن',callback_data=msg.sender_user_id_.."Mod:Rd"..result.sender_user_id_},{text ='مميز',callback_data=msg.sender_user_id_.."Special:Rd"..result.sender_user_id_}},
@@ -15161,7 +15171,7 @@ local List = {
 𖡋 𝗖𝗛 - ❨@Source_JACK❩ ✭ .
 ]],
 [[
-𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
+𖤂 ~ 𝑢𝑠?? #username  𖤐
 𖤂 ~ 𝑚??𝑔 #msgs ??
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
@@ -17131,7 +17141,7 @@ end
 bot_data:sadd(ban_id.."Sudo:User", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✅ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
+{{text = '✅ 𝚂𝙾𝚄??𝙲𝙴 𝙹𝙰𝙲𝙺', url="t.me/Source_JACK"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*✭ العضو تم ترقيته مطور*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
 return false
@@ -18311,7 +18321,7 @@ local Teext =[[
 ✭ بار 30k ب (150) ج
 ✭ بار 20k ب (100) ج
 ⇣ للتواصل مع المبرمجين اتبع الازرار ⇣
-❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
+❂••••••••••☾??𝐴𝐶𝐾 ☽••••••••••❂
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
