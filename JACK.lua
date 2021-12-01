@@ -222,18 +222,6 @@ end
 end  
 return JACK  
 end 
-if Text and Text:match('(.*)/msa3d:ban') then
-if tonumber(Text:match('(.*)/msa3d:ban')) == tonumber(userid) then
-tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,userid) 
-bot_data:del(ban_id.."msa3d:ban")
-bot_data:sadd(ban_id.."msa3d:ban", userid)
-bot_data:set(ban_id.."id:msa3d:ban", userid)
-local text = '\n● تم ترقيته مساعد في البوت\n'
-send(data.chat_id_, data.message_id_,text)
-end,nil)
-end
-end
-
 function Devban(msg) 
 local hash = bot_data:sismember(ban_id.."Dev:ban:2", msg.sender_user_id_) 
 if hash or SudoBot(msg) or msa3d(msg) then  
@@ -353,6 +341,7 @@ else
 return false 
 end 
 end
+
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(2140084638) then  
 var = true 
@@ -15171,7 +15160,7 @@ local List = {
 𖡋 𝗖𝗛 - ❨@Source_JACK❩ ✭ .
 ]],
 [[
-𖤂 ~ 𝑢𝑠?? #username  𖤐
+𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
 𖤂 ~ 𝑚??𝑔 #msgs ??
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
@@ -18321,7 +18310,7 @@ local Teext =[[
 ✭ بار 30k ب (150) ج
 ✭ بار 20k ب (100) ج
 ⇣ للتواصل مع المبرمجين اتبع الازرار ⇣
-❂••••••••••☾??𝐴𝐶𝐾 ☽••••••••••❂
+❂••••••••••☾𝐽𝐴𝐶𝐾 ☽••••••••••❂
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
